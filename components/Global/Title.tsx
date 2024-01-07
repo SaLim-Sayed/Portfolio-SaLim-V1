@@ -32,7 +32,7 @@ export default function Title({
           {title}
         </div>
       )}
-      {subTitle && (
+       
         <div
           className={cn(
             "text-darkColor-20 font-[400] lg:text-[1.2rem] text-[1rem] max-w-md",
@@ -41,10 +41,10 @@ export default function Title({
         >
           {subTitle}{" "}
           {desc && (
-            <span className="font-[500] text-darkColor-800">{desc} </span>
+            <span className="font-[600] text-xl text-orange-300">{desc} </span>
           )}
         </div>
-      )}
+     
     </div>
   );
 }

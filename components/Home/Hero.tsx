@@ -11,15 +11,20 @@ interface IProps {}
 
 const Hero = ({}: IProps) => {
   return (
-    <div className=" bg-black ">
+    <div className=" bg-[#11303d] ">
       <Center>
         <div className="   flex flex-col gap-4 justify-between  items-center   p-12   h-[400px] md:h-[250px]  md:max-h-[300px]  text-white">
           <div className="    text-4xl    ">
             <h1 className=" flex text-2xl md:text-3xl py-4">
-            <Button isIconOnly size="lg" variant="light" className="w-10 h-10 flex gap-2">
-            <Image src="S_logo.svg" alt="LOGO" layout="fill" />
-             
-          </Button><Typewriter
+              <Button
+                isIconOnly
+                size="lg"
+                variant="light"
+                className="w-10 h-10 flex gap-2"
+              >
+                <Image src="S_logo.svg" alt="LOGO" layout="fill" />
+              </Button>
+              <Typewriter
                 text="Salim Sayed Salim"
                 cursor={false}
                 loop

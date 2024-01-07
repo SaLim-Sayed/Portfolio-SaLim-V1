@@ -12,17 +12,24 @@ import "react-vertical-timeline-component/style.min.css";
 import {
   Accordion,
   AccordionItem,
+  Button,
+  Image,
   Listbox,
   ListboxItem,
 } from "@nextui-org/react";
 const WorkExp = () => {
   const title = (
-    <Typewriter
-      text="PROFESSIONAL EXPERIENCE"
-      loop
-      delay={1000}
-      cursor={false}
-    />
+    <div className="flex">
+      <Button
+        isIconOnly
+        size="lg"
+        variant="light"
+        className="w-10 h-10 flex gap-2"
+      >
+        <Image src="S_logo.svg" alt="LOGO" width={30} height={30} />
+      </Button>
+      <Typewriter text="PROFESSIONAL EXPERIENCE" loop delay={1000} cursor={false} />
+    </div>
   );
   return (
     <div className="bg-slate-200 py-6" id="WorkExperince">

@@ -5,10 +5,12 @@ import TeckStack from "./TechStack/TeckStack";
 import WorkExp from "./Work/WorkExp";
 import ScrollToTop from "react-scroll-to-top";
 import Projects from "./Project/Projects";
+import Ads from "../Global/Ads";
 
 const Home = () => {
   return (
     <div>
+      <Ads />
       <Hero />
       <About />
       <WorkExp />

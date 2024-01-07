@@ -9,10 +9,20 @@ import Link from "next/link";
 import { ViewIcon } from "lucide-react";
 const Projects = () => {
   const title = (
-    <Typewriter text="Top Recent Projects" loop delay={1000} cursor={false} />
+    <div className="flex">
+      <Button
+        isIconOnly
+        size="lg"
+        variant="light"
+        className="w-10 h-10 flex gap-2"
+      >
+        <Image src="S_logo.svg" alt="LOGO" width={30} height={30} />
+      </Button>
+      <Typewriter text="Top Recent Projects" loop delay={1000} cursor={false} />
+    </div>
   );
   return (
-    <div className="bg-slate-100 py-6" id="Projects">
+    <div className="bg-slate-200 py-6" id="Projects">
       <Center>
         <Title title={title} />
         <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-6  md:grid-cols-2">
@@ -22,13 +32,10 @@ const Projects = () => {
               isFooterBlurred
               className="  h-[300px]  min-w-full"
             >
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny  uppercase font-bold">
-                  Your day your way
+              <CardHeader className="absolute z-10 top-0 flex-col items-start bg-black/60">
+                <p className="  uppercase text-3xl font-bold text-white">
+                  {item.name}
                 </p>
-                <h4 className="  font-medium text-xl">
-                  Your checklist for better sleep
-                </h4>
               </CardHeader>
               <Image
                 isZoomed
@@ -50,7 +57,7 @@ const Projects = () => {
                 </Link>
                 <Link target="_blank" href={item.demo}>
                   <Button color="warning" size="lg">
-                   <ViewIcon/>  Live Demo
+                    <ViewIcon /> Live Demo
                   </Button>
                 </Link>
               </CardFooter>
