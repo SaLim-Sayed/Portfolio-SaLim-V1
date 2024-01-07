@@ -16,7 +16,7 @@ import Title from "./Title";
 import Typewriter from "react-ts-typewriter";
 
 export default function Ads() {
-  const title=(
+  const title = (
     <div className="flex">
       <ButtonGroup
         isIconOnly
@@ -28,7 +28,7 @@ export default function Ads() {
       </ButtonGroup>
       <Typewriter text="Salim Sayed Salim " loop delay={1000} cursor={false} />
     </div>
-  )
+  );
   const [adsState, adsStatusStter] = useState(true);
   return (
     <Modal
@@ -49,7 +49,8 @@ export default function Ads() {
           className="flex flex-col gap-1  "
         >
           <Button
-          isIconOnly radius="full"
+            isIconOnly
+            radius="full"
             onClick={() => {
               adsStatusStter(false);
             }}
@@ -60,8 +61,12 @@ export default function Ads() {
           </Button>
         </ModalHeader>
         <ModalBody aria-labelledby="labeldiv" className="pb-[20px] ">
-          <Title title={title} exStTitle="text-white"  subTitle="" desc="Experienced Frontend  Developer" />
-           
+          <Title
+            title={title}
+            exStTitle="text-white"
+            subTitle=""
+            desc="Experienced Frontend  Developer"
+          />
         </ModalBody>
       </ModalContent>
     </Modal>
