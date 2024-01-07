@@ -1,13 +1,15 @@
-import { cn } from "@/libs/cn";
 import Hero from "./Hero";
 import About from "./About/About";
-import Center from "../Global/Ui/Center";
+import TeckStack from "./TechStack/TeckStack";
+import WorkExp from "./Work/WorkExp";
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <About />
+      <WorkExp/>
+      <TeckStack />
     </div>
   );
 };

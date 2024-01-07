@@ -11,15 +11,18 @@ const About = () => {
           <Title title="About Me" />
 
           <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
-    <Button size="lg" className=" shadow-lg shadow-black w-[80%] p-0  h-[90%]">
-            <Image
-            isBlurred
-              src="logo.jpg"
-              alt=""
-              width={300}
-              height={300}
-              className=" cursor-pointer  m-0  "
-            />
+            <Button
+              size="lg"
+              className=" shadow-lg shadow-black w-[80%] p-0  h-[90%]"
+            >
+              <Image
+                isBlurred
+                src="logo.jpg"
+                alt=""
+                width={300}
+                height={300}
+                className=" cursor-pointer  m-0  "
+              />
             </Button>
 
             <div className="flex items-center p-5 ">

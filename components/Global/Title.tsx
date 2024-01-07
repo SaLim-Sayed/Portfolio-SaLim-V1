@@ -8,7 +8,7 @@ export default function Title({
   exStTitle,
   exStSubTitle,
 }: {
-  title?: string;
+  title?: any;
   subTitle?: string;
   desc?: string;
   exSt?: string;
@@ -25,7 +25,7 @@ export default function Title({
       {title && (
         <div
           className={cn(
-            "md:text-[36px] text-[24px] font-[600] ",
+            "md:text-[36px] text-[24px] font-[600] text-teal-700 ",
             exStTitle && exStTitle
           )}
         >
