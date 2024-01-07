@@ -6,21 +6,18 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div
-        className="flex flex-col items-center justify-center  bg-slate-100 "
-        id="about"
-      >
+      <div className="bg-slate-100 py-4  " id="about">
         <Center>
           <Title title="About Me" />
 
-          <div className="grid grid-cols-1 items-center justify-center  justify-items-center  md:grid-cols-2 p-5  ">
+          <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
             <Image
               isZoomed
               src="logo.jpg"
               alt=""
-              width={250}
-              height={250}
-              className=" cursor-pointer m-0 p-0"
+              width={300}
+              height={300}
+              className=" cursor-pointer    "
             />
 
             <div className="flex items-center  ">
