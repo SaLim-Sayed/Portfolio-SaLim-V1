@@ -17,7 +17,12 @@ import {
 } from "@nextui-org/react";
 const WorkExp = () => {
   const title = (
-    <Typewriter text="PROFESSIONAL EXPERIENCE" loop delay={1000} cursor={false} />
+    <Typewriter
+      text="PROFESSIONAL EXPERIENCE"
+      loop
+      delay={1000}
+      cursor={false}
+    />
   );
   return (
     <div className="bg-slate-200 py-6" id="WorkExperince">
@@ -59,7 +64,7 @@ const WorkExp = () => {
               @ OFFTO
             </h4>
 
-            <Listbox aria-label="Actions" onAction={(key) => alert(key)}>
+            <Listbox>
               <ListboxItem
                 key="new"
                 className="text-danger font-bold text-lg"
@@ -67,7 +72,7 @@ const WorkExp = () => {
               >
                 I am Responsible for:
               </ListboxItem>
-              <ListboxItem key="new">
+              <ListboxItem key="2">
                 •Developing and implementing user interfaces,
               </ListboxItem>
               <ListboxItem key="copy">
@@ -78,7 +83,7 @@ const WorkExp = () => {
                 • API integration using React Query Axios.
               </ListboxItem>
               <ListboxItem key="4">
-            • State management using   Redux and Zustand.
+                • State management using Redux and Zustand.
               </ListboxItem>
             </Listbox>
           </VerticalTimelineElement>
@@ -93,14 +98,14 @@ const WorkExp = () => {
             iconStyle={{ background: "#1e1e2c", color: "#fff" }}
             icon={<SiReact />}
           >
-          <h3 className="vertical-timeline-element-title text-lg font-bold">
+            <h3 className="vertical-timeline-element-title text-lg font-bold">
               Frontend React Developer
             </h3>
             <h4 className="vertical-timeline-element-subtitle font-bold">
               @ Future of Egypt ,Egypt Army
             </h4>
 
-            <Listbox >
+            <Listbox>
               <ListboxItem
                 key="new"
                 className="text-danger font-bold text-lg"
@@ -115,15 +120,15 @@ const WorkExp = () => {
                 •Creating dynamic and interactive UIs using MUI Ui.
               </ListboxItem>
 
-              <ListboxItem key="edit" >
-                •Data fetching and API integration using  Axios.
+              <ListboxItem key="edit">
+                •Data fetching and API integration using Axios.
               </ListboxItem>
               <ListboxItem key="4">
-                • state management  with Context Api.
+                • state management with Context Api.
               </ListboxItem>
             </Listbox>
           </VerticalTimelineElement>
-         
+
           <VerticalTimelineElement
             iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
             icon={<StarIcon />}

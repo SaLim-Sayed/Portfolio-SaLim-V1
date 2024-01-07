@@ -34,7 +34,6 @@ export default function MainNavbar() {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           <Button size="lg" variant="light" className="w-10 h-10 flex gap-2">
-            <Image src="S_logo.svg" alt="LOGO" layout="fill" />
             <p className="font-bold text-3xl text-[#00b5bc]">SaLim</p>
           </Button>
         </NavbarBrand>
@@ -42,9 +41,9 @@ export default function MainNavbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <Button size="lg" variant="light" className="w-10 h-10 flex gap-2">
-            <Image src="S_logo.svg" alt="LOGO" layout="fill" />
-            <p className="font-bold text-3xl text-[#00b5bc]">SaLim</p>
+          <Button size="lg" variant="light" className="w-40 h-10 flex justify-between gap-2">
+            
+            <div className="font-bold text-3xl text-[#00b5bc]">SaLim</div>
           </Button>
         </NavbarBrand>
 
@@ -65,8 +64,8 @@ export default function MainNavbar() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button isIconOnly variant="light">
-            <Image src="/logo.jpg" alt="LOGO" layout="fill" />
+      <Button isIconOnly size="lg" className="font-bold w-6 h-8"   variant="light">
+      <Image src="S_logo.svg" alt="LOGO" layout="fill" />
           </Button>
         </NavbarItem>
       </NavbarContent>
