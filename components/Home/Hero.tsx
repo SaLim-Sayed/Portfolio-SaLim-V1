@@ -12,8 +12,8 @@ const Hero = ({}: IProps) => {
   return (
     <div className=" bg-black ">
       <Center>
-        <div className=" flex flex-col gap-4 justify-between  items-center md:items-start p-5   h-[300px]   text-white">
-          <div className="    text-5xl  pt-12    ">
+        <div className="   flex flex-col gap-4 justify-between  items-center   p-12   h-[300px] md:h-[200px]  md:max-h-[300px]  text-white">
+          <div className="    text-4xl    ">
             <h1 className="">
               Hello 👋 I'm{" "}
               <span className="text-orange-500 ">
@@ -21,7 +21,7 @@ const Hero = ({}: IProps) => {
               </span>
             </h1>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <Button color="primary" size="lg">
               <Link
                 href="https://api.whatsapp.com/send?phone=201062913674"
