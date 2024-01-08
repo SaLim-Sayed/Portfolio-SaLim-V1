@@ -25,7 +25,7 @@ export default function Title({
       {title && (
         <div
           className={cn(
-            "md:text-[36px] text-[24px] font-[500] md:font-[600]  text-teal-700 ",
+            "md:text-[36px] text-[20px] font-[400] md:font-[600]  text-teal-700 ",
             exStTitle && exStTitle
           )}
         >
