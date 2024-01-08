@@ -6,6 +6,8 @@ import {
 } from "lucide-react";
 import Center from "../Global/Ui/Center";
 import { Button } from "@nextui-org/react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface IProps {}
 
@@ -14,20 +16,43 @@ const Footer = ({}: IProps) => {
     <div className=" bg-black ">
       <Center>
         <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-4 text-white">
-          <div className="flex">
-            Copy rights <Copyright /> reserved to{" "}
+          <div className="flex font-bold">
+        Copy rights  <Copyright className="mx-2" />  reserved  to{" "}
             <span className="font-bold text-teal-600 mx-2"> SaLim</span>
           </div>
           <div className=" flex gap-4">
+            <Link
+              href="https://www.linkedin.com/in/salim-elsayed981"
+              rel="noreferrer"
+            >
+              <Link href="https://github.com/SaLim-Sayed" rel="noreferrer">
+                <Button isIconOnly radius="full">
+                  <Image
+                    src="/social/linked.png"
+                    width={30}
+                    height={30}
+                    alt="css"
+                  />
+                </Button>
+              </Link>
+            </Link>
             <Button isIconOnly radius="full">
-              <FacebookIcon />
+              <Image src="/tech/github.svg" width={30} height={30} alt="css" />
             </Button>
-            <Button isIconOnly radius="full">
-              <LinkedinIcon />
-            </Button>
-            <Button isIconOnly radius="full">
-              <InstagramIcon />
-            </Button>
+            <Link
+              href="https://api.whatsapp.com/send?phone=201062913674"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Button isIconOnly radius="full">
+                <Image
+                  src="/social/whats.png"
+                  width={30}
+                  height={30}
+                  alt="css"
+                />
+              </Button>
+            </Link>
           </div>
         </div>
       </Center>

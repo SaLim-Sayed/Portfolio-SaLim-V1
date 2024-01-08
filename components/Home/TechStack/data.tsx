@@ -1,29 +1,4 @@
-import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap } from "react-icons/bs";
-import { FaCss3Alt, FaNodeJs } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import {
-  SiJavascript,
-  SiMui,
-  SiReact,
-  SiTailwindcss,
-  SiFigma,
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiMongodb,
-  SiMysql,
-  SiTypescript,
-  SiGithub,
-  SiWordpress,
-  SiFirebase,
-  SiDocker,
-  SiExpress,
-  SiNginx,
-  SiAngular,
-  SiNextui,
-  SiChakraui,
-  SiFramer,
-} from "react-icons/si";
-import { IoLogoCss3 } from "react-icons/io";
+ 
 import Image from "next/image";
 export const TechstackList = [
   {
