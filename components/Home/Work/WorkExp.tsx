@@ -31,7 +31,6 @@ const WorkExp = () => {
       </Button>
       <Typewriter
         text="PROFESSIONAL EXPERIENCE"
-        loop
         delay={1000}
         cursor={false}
       />
@@ -41,8 +40,9 @@ const WorkExp = () => {
     <div className="bg-slate-200 py-6" id="WorkExperince">
       <Center>
         <Title title={title} />
-        <VerticalTimeline>
-          {/* <VerticalTimelineElement
+        <Fade duration={1000} delay={500} distance="200px" bottom>
+          <VerticalTimeline>
+            {/* <VerticalTimelineElement
             visible={true}
             className="vertical-timeline-element--education"
             date="2017 - 2022"
@@ -59,7 +59,6 @@ const WorkExp = () => {
           </VerticalTimelineElement>
 
            */}
-          <Fade duration={1000} delay={500} distance="200px" bottom>
             <VerticalTimelineElement
               visible={true}
               className="vertical-timeline-element--work"
@@ -101,8 +100,6 @@ const WorkExp = () => {
                 </ListboxItem>
               </Listbox>
             </VerticalTimelineElement>
-          </Fade>
-          <Fade duration={1000} delay={500} distance="200px" bottom>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
@@ -144,8 +141,8 @@ const WorkExp = () => {
                 </ListboxItem>
               </Listbox>
             </VerticalTimelineElement>
-          </Fade>
-        </VerticalTimeline>
+          </VerticalTimeline>
+        </Fade>
       </Center>
     </div>
   );

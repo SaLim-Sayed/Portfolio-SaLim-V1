@@ -32,19 +32,23 @@ export default function Title({
           {title}
         </div>
       )}
-       
-        <div
-          className={cn(
-            "text-darkColor-20 font-[400] lg:text-[1.2rem] text-[1rem] max-w-md",
-            exStSubTitle && exStSubTitle
-          )}
-        >
-          {subTitle}{" "}
-          {desc && (
-            <span className="font-[600] text-xl text-orange-400">{desc} </span>
-          )}
-        </div>
-     
+
+      <div
+        className={cn(
+          "text-white font-[600] md:text-[30px] text-[20px] max-w-md",
+          exStSubTitle && exStSubTitle
+        )}
+      >
+        {subTitle}
+      </div>
+      <div
+        className={cn(
+          "text-darkColor-20 font-[400] lg:text-[1.2rem] text-[1rem] max-w-md",
+          exStSubTitle && exStSubTitle
+        )}
+      >
+        <span className="font-[600] text-xl text-orange-400">{desc} </span>
+      </div>
     </div>
   );
 }
