@@ -7,6 +7,7 @@ import { TechstackList } from "./data";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
 import { ViewIcon } from "lucide-react";
+import { Fade } from "react-swift-reveal";
 const Projects = () => {
   const title = (
     <div className="flex">
@@ -27,8 +28,10 @@ const Projects = () => {
         <Title title={title} />
         <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-6  md:grid-cols-2">
           {TechstackList.map((item) => (
-            <Card
-              key={item.id}
+           
+              
+              <Fade duration={1000} delay={500} distance="200px" key={item.id} bottom>
+           <Card
               isFooterBlurred
               className="  h-[300px]  min-w-full"
             >
@@ -62,6 +65,7 @@ const Projects = () => {
                 </Link>
               </CardFooter>
             </Card>
+            </Fade>
           ))}
         </div>
       </Center>

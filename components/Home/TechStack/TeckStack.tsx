@@ -4,6 +4,7 @@ import Center from "@/components/Global/Ui/Center";
 import Typewriter from "react-ts-typewriter";
 import { Button, Image } from "@nextui-org/react";
 import { TechstackList } from "./data";
+import { Fade } from "react-swift-reveal";
 
 const TeckStack = () => {
   const title = (
@@ -25,14 +26,17 @@ const TeckStack = () => {
         <Title title={title} />
         <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-2 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-4">
           {TechstackList.map((item) => (
-            <Button
-              variant="flat"
+            <Fade
+              duration={1000}
+              delay={500}
+              distance="200px"
               key={item.id}
-              size="lg"
-              className=" bg-teal-700/20 w-44"
+              bottom
             >
-              {item.icon} {item.name}
-            </Button>
+              <Button variant="flat" size="lg" className=" bg-teal-700/20 w-44">
+                {item.icon} {item.name}
+              </Button>
+            </Fade>
           ))}
         </div>
       </Center>

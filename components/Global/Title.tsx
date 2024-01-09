@@ -41,7 +41,7 @@ export default function Title({
         >
           {subTitle}{" "}
           {desc && (
-            <span className="font-[600] text-xl text-orange-300">{desc} </span>
+            <span className="font-[600] text-xl text-orange-400">{desc} </span>
           )}
         </div>
      
