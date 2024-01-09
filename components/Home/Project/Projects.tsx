@@ -37,7 +37,7 @@ const Projects = () => {
             >
               <Card
                 isFooterBlurred
-                className="  flex flex-col  bg-black/60 justify-between h-[500px] w-[400px] min-w-full"
+                className="  overflow-hidden  flex flex-col  bg-black/60 justify-between h-[500px] w-[400px] min-w-full"
               >
                 <CardHeader className="absolute z-10 top-0 flex-col  bg-black/60">
                   <p className="  uppercase text-3xl font-bold text-white">
