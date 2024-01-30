@@ -15,6 +15,7 @@ import { links } from "./links";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/libs/cn";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function MainNavbar() {
   const pathname = usePathname();
@@ -41,8 +42,11 @@ export default function MainNavbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <Button size="lg" variant="light" className="w-40 h-10 flex justify-between gap-2">
-            
+          <Button
+            size="lg"
+            variant="light"
+            className="w-40 h-10 flex justify-between gap-2"
+          >
             <div className="font-bold text-3xl text-[#00b5bc]">SaLim</div>
           </Button>
         </NavbarBrand>
@@ -50,13 +54,15 @@ export default function MainNavbar() {
         {links.map((item, index) => (
           <NavbarItem key={item.id}>
             <Button variant="light">
-            <Link
-              href={item.url}
-              className={cn(isAcive === item.id && "text-orange-500 font-bold")}
-              onClick={() => setIsAcive(item.id)}
-            >
-              {item.title}
-            </Link>
+              <Link
+                href={item.url}
+                className={cn(
+                  isAcive === item.id && "text-orange-500 font-bold"
+                )}
+                onClick={() => setIsAcive(item.id)}
+              >
+                {item.title}
+              </Link>
             </Button>
           </NavbarItem>
         ))}
@@ -64,8 +70,17 @@ export default function MainNavbar() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-      <Button isIconOnly size="lg" className="font-bold w-6 h-8"   variant="light">
-      <Image src="S_logo.svg" alt="LOGO" layout="fill" />
+          <Button color="success" size="lg">
+            <Link
+              className="flex items-center gap-2"
+              href="https://api.whatsapp.com/send?phone=201062913674"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {" "}
+              Call Me
+              <BsWhatsapp />
+            </Link>
           </Button>
         </NavbarItem>
       </NavbarContent>
