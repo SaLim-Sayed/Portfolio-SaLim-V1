@@ -2,6 +2,48 @@ import Image from "next/image";
 export const projectsList = [
   {
     id: 1,
+    name: "MaroCare",
+    icon: "/project/MaroCare.png",
+    github: "https://github.com/SaLim-Sayed/Ecommerce-v1",
+    demo: "https://ecommerce-v1-ashen.vercel.app/",
+    tools: [
+      {
+        id: 8,
+        name: "Nextjs",
+        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
+      },
+
+      {
+        id: 20,
+        name: "Next UI ",
+        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 22,
+        name: "React Query",
+        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 10,
+        name: "Tailwind ",
+        icon: (
+          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
+        ),
+      },
+      {
+        id: 5,
+        name: "TypeScript",
+        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 22,
+        name: "Redux",
+        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
+      },
+    ],
+  },
+  {
+    id: 1,
     name: "Shopzila",
     icon: "/project/shopzila.png",
     github: "https://github.com/SaLim-Sayed/Shoppzila-v1",
@@ -126,8 +168,8 @@ export const projectsList = [
     id: 3,
     name: "Medical Clinic",
     icon: "/project/medical.png",
-    github: "https://github.com/SaLim-Sayed/Shoppzila-v1",
-    demo: "https://shoppzila-v3.vercel.app/",
+    github: "https://github.com/SaLim-Sayed/medical-clinic",
+    demo: "https://medical-clinic.onrender.com/",
     tools: [
       {
         id: 8,
@@ -213,7 +255,7 @@ export const projectsList = [
         name: "React JS",
         icon: <Image src="/tech/react.svg" width={30} height={30} alt="css" />,
       },
-       
+
       {
         id: 3,
         name: "Tailwind",
@@ -231,7 +273,6 @@ export const projectsList = [
         name: "Redux",
         icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
       },
-    
     ],
   },
   {
@@ -263,7 +304,6 @@ export const projectsList = [
         name: "Typescript",
         icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
       },
-    
     ],
   },
   {
@@ -283,13 +323,12 @@ export const projectsList = [
         name: "Css",
         icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" />,
       },
-       
+
       {
         id: 4,
         name: "Javascript",
         icon: <Image src="/tech/js.svg" width={30} height={30} alt="css" />,
       },
-    
     ],
   },
 ];
