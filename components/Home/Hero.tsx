@@ -46,7 +46,7 @@ const Hero = ({}: IProps) => {
                 <Link
                   className="flex items-center gap-2"
                   target="_blank"
-                  href="https://drive.google.com/file/d/1MdZva7sgiqqRwVRhNbumUyBvP0KktvGC/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1ShY-HQfwiiEixIBEby3tVDQYMHtWdb9P/view?usp=drivesdk"
                 >
                   My Resume
                   <File />
