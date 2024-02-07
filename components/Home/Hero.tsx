@@ -16,43 +16,61 @@ const Hero = ({}: IProps) => {
   return (
     <div className=" bg-[#11303d] ">
       <Center>
-        <div className="   flex flex-col gap-4 justify-between  items-center   p-12   h-[400px] md:h-[300px]  md:max-h-[300px]  text-white">
-          <div className="    text-4xl    ">
-            <Title
-              exStTitle="text-white"
-              title={"Hello 👋 I'm"}
-              subTitle="Salim Sayed Salim "
-              desc="a Frontend Next Developer"
-            />
-            <h1 className=""></h1>
+        <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
+          {" "}
+          <div className="  shadow-none m-4">
+            <div
+              className="badge-base LI-profile-badge rounded-md shadow-2xl"
+              data-locale="ar_AE"
+              data-size="large"
+              data-theme="light"
+              data-type="HORIZONTAL"
+              data-vanity="salim-elsayed981"
+              data-version="v1"
+            >
+              <Link
+                className="badge-base__link LI-simple-link text-blue-500"
+                href="https://eg.linkedin.com/in/salim-elsayed981?trk=profile-badge"
+              ></Link>
+            </div>
           </div>
-          <div className="flex gap-6">
-            <Fade duration={1000} delay={500} distance="200px" left>
-              <Button color="success" size="lg">
-                <Link
-                  className="flex items-center gap-2"
-                  href="https://api.whatsapp.com/send?phone=201062913674"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  {" "}
-                  Hire Me
-                  <BsWhatsapp />
-                </Link>
-              </Button>
-            </Fade>
-            <Fade duration={1000} delay={500} distance="200px" right>
-              <Button size="lg" color="secondary">
-                <Link
-                  className="flex items-center gap-2"
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1ShY-HQfwiiEixIBEby3tVDQYMHtWdb9P/view?usp=drivesdk"
-                >
-                  My Resume
-                  <File />
-                </Link>
-              </Button>
-            </Fade>
+          <div className="   flex flex-col gap-4  items-center   p-12    text-white">
+            <div className="    text-4xl    ">
+              <Title
+                exStTitle="text-white"
+                title={"Hello 👋 I'm"}
+                subTitle="Salim Sayed Salim "
+                desc="a Frontend Next Developer"
+              />
+            </div>
+            <div className="flex gap-6">
+              <Fade duration={1000} delay={500} distance="200px" left>
+                <Button color="success" size="lg">
+                  <Link
+                    className="flex items-center gap-2"
+                    href="https://api.whatsapp.com/send?phone=201062913674"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {" "}
+                    Hire Me
+                    <BsWhatsapp />
+                  </Link>
+                </Button>
+              </Fade>
+              <Fade duration={1000} delay={500} distance="200px" right>
+                <Button size="lg" color="secondary">
+                  <Link
+                    className="flex items-center gap-2"
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1ShY-HQfwiiEixIBEby3tVDQYMHtWdb9P/view?usp=drivesdk"
+                  >
+                    My Resume
+                    <File />
+                  </Link>
+                </Button>
+              </Fade>
+            </div>
           </div>
         </div>
       </Center>

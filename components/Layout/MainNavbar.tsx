@@ -70,9 +70,9 @@ export default function MainNavbar() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button color="success" size="lg">
+          <Button variant="bordered" size="lg">
             <Link
-              className="flex items-center gap-2"
+              className="flex items-center text-[#00b5bc] gap-2"
               href="https://api.whatsapp.com/send?phone=201062913674"
               rel="noreferrer"
               target="_blank"

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 import "react-vertical-timeline-component/style.min.css";
 import Footer from "@/components/Layout/Footer";
+import Head from "next/head";
 export default function RootLayout({
   children,
 }: {
@@ -24,6 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://platform.linkedin.com/badges/js/profile.js"
+          async
+          defer
+          type="text/javascript"
+        />
+      </head>
       <body className={inter.className}>
         <NextUi>
           <HydrationZustand LoaderComponent={<MainLoader />}>
