@@ -40,7 +40,7 @@ const Hero = ({}: IProps) => {
                 exStTitle="text-white"
                 title={"Hello 👋 I'm"}
                 subTitle="Salim Sayed Salim "
-                desc="a Frontend Next Developer"
+                desc="a Frontend   Developer"
               />
             </div>
             <div className="flex gap-6">

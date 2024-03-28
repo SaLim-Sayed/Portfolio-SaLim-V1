@@ -42,23 +42,48 @@ const WorkExp = () => {
         <Title title={title} />
         <Fade duration={1000} delay={500} distance="200px" bottom>
           <VerticalTimeline>
-            {/* <VerticalTimelineElement
-            visible={true}
-            className="vertical-timeline-element--education"
-            date="2017 - 2022"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="vertical-timeline-element-title font-bold">
-              Bachelor of Computer Sceince & Engineering
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Faculty of Electronic Engineering / Menoufia University
-            </h4>
-            <p>Creative Direction, Visual Design</p>
-          </VerticalTimelineElement>
+            
+          <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              visible={true}
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  white",
+              }}
+              date="2024 - present"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">
+                Frontend Developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">
+                @ CIB Egypt
+              </h4>
 
-           */}
+              <Listbox>
+                <ListboxItem
+                  key="new"
+                  className="text-danger font-bold text-lg"
+                  color="danger"
+                >
+                  I am Responsible for:
+                </ListboxItem>
+                <ListboxItem key="new">
+                  •Developing and implementing user interfaces,
+                </ListboxItem>
+                <ListboxItem key="copy">
+                  •Creating dynamic and interactive  .
+                </ListboxItem>
+
+                <ListboxItem key="edit">
+                  •Data fetching and API integration using RTKQuery.
+                </ListboxItem>
+                <ListboxItem key="4">
+                  • state management with RTK.
+                </ListboxItem>
+              </Listbox>
+            </VerticalTimelineElement>
             <VerticalTimelineElement
               visible={true}
               className="vertical-timeline-element--work"
