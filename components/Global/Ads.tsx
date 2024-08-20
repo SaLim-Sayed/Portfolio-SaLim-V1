@@ -22,7 +22,7 @@ export default function Ads() {
         variant="light"
         className="w-10 h-10 flex gap-2"
       >
-        <Image src="/S_logo.svg" alt="LOGO" width={30} height={30} />
+        <Image src="/S_logo.jpeg" alt="LOGO" width={30} height={30} />
       </ButtonGroup>
       <Typewriter text="Salim Sayed Salim " loop delay={1000} cursor={false} />
     </div>

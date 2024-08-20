@@ -17,9 +17,9 @@ const Projects = () => {
         variant="light"
         className="w-10 h-10 flex gap-2"
       >
-        <Image src="S_logo.svg" alt="LOGO" width={30} height={30} />
+        <Image src="S_logo.jpeg" alt="LOGO" width={30} height={30} />
       </Button>
-      <Typewriter text="Top Recent Projects"   delay={1000} cursor={false} />
+      <Typewriter text="Top Recent Projects" delay={1000} cursor={false} />
     </div>
   );
   return (

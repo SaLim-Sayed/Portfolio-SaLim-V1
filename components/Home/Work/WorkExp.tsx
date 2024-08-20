@@ -1,23 +1,16 @@
 "use client";
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
+import { Button, Image, Listbox, ListboxItem } from "@nextui-org/react";
+import { SiNextdotjs, SiReact } from "react-icons/si";
+import { Fade } from "react-swift-reveal";
 import Typewriter from "react-ts-typewriter";
-import { SiNextdotjs, SiReact, SiReacthookform } from "react-icons/si";
-import { SchoolIcon, StarIcon, WorkflowIcon } from "lucide-react";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import {
-  Accordion,
-  AccordionItem,
-  Button,
-  Image,
-  Listbox,
-  ListboxItem,
-} from "@nextui-org/react";
-import { Fade } from "react-swift-reveal";
 const WorkExp = () => {
   const title = (
     <div className="flex">
@@ -27,13 +20,9 @@ const WorkExp = () => {
         variant="light"
         className="w-10 h-10 flex gap-2"
       >
-        <Image src="S_logo.svg" alt="LOGO" width={30} height={30} />
+        <Image src="S_logo.jpeg" alt="LOGO" width={30} height={30} />
       </Button>
-      <Typewriter
-        text="PROFESSIONAL EXPERIENCE"
-        delay={1000}
-        cursor={false}
-      />
+      <Typewriter text="PROFESSIONAL EXPERIENCE" delay={1000} cursor={false} />
     </div>
   );
   return (
@@ -42,8 +31,7 @@ const WorkExp = () => {
         <Title title={title} />
         <Fade duration={1000} delay={500} distance="200px" bottom>
           <VerticalTimeline>
-            
-          <VerticalTimelineElement
+            <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
               contentStyle={{ background: "white", color: "#1e1e2c" }}
@@ -73,15 +61,13 @@ const WorkExp = () => {
                   •Developing and implementing user interfaces,
                 </ListboxItem>
                 <ListboxItem key="copy">
-                  •Creating dynamic and interactive  .
+                  •Creating dynamic and interactive .
                 </ListboxItem>
 
                 <ListboxItem key="edit">
                   •Data fetching and API integration using RTKQuery.
                 </ListboxItem>
-                <ListboxItem key="4">
-                  • state management with RTK.
-                </ListboxItem>
+                <ListboxItem key="4">• state management with RTK.</ListboxItem>
               </Listbox>
             </VerticalTimelineElement>
             <VerticalTimelineElement

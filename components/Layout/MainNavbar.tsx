@@ -1,21 +1,21 @@
 "use client";
-import React from "react";
+import { cn } from "@/libs/cn";
 import {
+  Button,
+  Image,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Button,
+  NavbarMenuToggle,
 } from "@nextui-org/react";
 import Link from "next/link";
-import { links } from "./links";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { cn } from "@/libs/cn";
+import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
+import { links } from "./links";
 
 export default function MainNavbar() {
   const pathname = usePathname();
@@ -34,8 +34,13 @@ export default function MainNavbar() {
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <Button size="lg" variant="light" className="w-10 h-10 flex gap-2">
-            <p className="font-bold text-3xl text-[#00b5bc]">SaLim</p>
+          <Button
+            isIconOnly
+            size="lg"
+            variant="light"
+            className="w-20 h-20 flex gap-2"
+          >
+            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
           </Button>
         </NavbarBrand>
       </NavbarContent>
@@ -43,11 +48,12 @@ export default function MainNavbar() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
           <Button
+            isIconOnly
             size="lg"
             variant="light"
-            className="w-40 h-10 flex justify-between gap-2"
+            className="w-20 h-20 flex gap-2"
           >
-            <div className="font-bold text-3xl text-[#00b5bc]">SaLim</div>
+            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
           </Button>
         </NavbarBrand>
 
