@@ -32,7 +32,7 @@ const ContactForm = () => {
 
       const response = await emailjs.send(
         "service_xd0myma", // Replace with your service ID
-        "template_bxeeqki", // Replace with your template ID
+        "template_4elw98d", // Replace with your template ID
         data,
         "byBybFxeBGsHgUAJv" // Replace with your user ID
       );
