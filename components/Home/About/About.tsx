@@ -12,7 +12,7 @@ const About = () => {
           <Title title="About Me" />
 
           <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
-            <Fade duration={1000} delay={500} distance="200px"  bottom>
+            <Fade duration={1000} delay={500} distance="200px" bottom>
               <Button size="lg" className="   w-full p-0  h-full bg-slate-100 ">
                 <Image
                   isBlurred
@@ -27,12 +27,15 @@ const About = () => {
             <Fade duration={1000} delay={500} distance="200px" bottom>
               <div className="flex items-center p-5 ">
                 <p className="    leading-8 text-justify">
-                  Experienced Frontend Web Developer with a focus on React.Js
-                  and Next.js, bringing [2 years] of hands-on experience in
-                  developing and implementing innovative web solutions. Proven
-                  ability to collaborate with cross-functional teams to deliver
-                  high quality software. Adept at translating design concepts
-                  into responsive and interactive user interfaces
+                  Highly skilled Senior Frontend Developer with 3+ years of
+                  experience in building responsive, user-centric web
+                  applications using React, Next.js, and React Native.
+                  Proficient in crafting interactive UIs, managing state with
+                  Redux and Zustand, and integrating APIs for seamless user
+                  experiences. Adept at optimizing performance, collaborating
+                  with cross-functional teams, and employing the latest
+                  technologies to deliver scalable solutions in the banking,
+                  e-commerce, and real estate sectors.
                 </p>
               </div>
             </Fade>

@@ -69,7 +69,7 @@ export default function Ads() {
           <Title
             title={title}
             exStTitle="text-white"
-            desc="Experienced Frontend Developer"
+            desc="Software Engineer [ Frontend ]"
           />
         </ModalBody>
       </ModalContent>

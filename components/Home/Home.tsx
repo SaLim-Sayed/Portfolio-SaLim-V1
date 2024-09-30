@@ -6,6 +6,8 @@ import WorkExp from "./Work/WorkExp";
 import ScrollToTop from "react-scroll-to-top";
 import Projects from "./Project/Projects";
 import Ads from "../Global/Ads";
+import ContactUs from "./Contact/ContactUs";
+import ContactList from "./Contact/ContactList";
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       <WorkExp />
       <TeckStack />
       <Projects />
+      <ContactUs />
+      {/* <ContactList/> */}
       <ScrollToTop
         smooth
         color="#f29f67"

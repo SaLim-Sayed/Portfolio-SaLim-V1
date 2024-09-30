@@ -40,12 +40,12 @@ const Hero = ({}: IProps) => {
                 exStTitle="text-white"
                 title={"Hello 👋 I'm"}
                 subTitle="Salim Sayed Salim "
-                desc="a Frontend   Developer"
+                desc="Software Engineer ( Frontend )"
               />
             </div>
             <div className="flex gap-6">
               <Fade duration={1000} delay={500} distance="200px" left>
-                <Button color="success" size="lg">
+                <Button color="success" variant="ghost" size="lg">
                   <Link
                     className="flex items-center gap-2"
                     href="https://api.whatsapp.com/send?phone=201062913674"
@@ -53,7 +53,7 @@ const Hero = ({}: IProps) => {
                     target="_blank"
                   >
                     {" "}
-                    Hire Me
+                    Whatsapp 
                     <BsWhatsapp />
                   </Link>
                 </Button>

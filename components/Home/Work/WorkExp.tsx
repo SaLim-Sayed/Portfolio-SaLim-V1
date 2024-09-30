@@ -112,6 +112,42 @@ const WorkExp = () => {
               </Listbox>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              visible={true}
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  white",
+              }}
+              date="10-2021 - 4-2023"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">
+                Senior Frontend React Developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">
+                @ SQM , Egypt
+              </h4>
+
+              <div className="text-danger font-bold text-lg">
+                I am Responsible for:
+              </div>
+              <div className="text-xs">
+                <ul className="list-disc">
+                  <li>Built a comprehensive real estate admin platform,</li>
+                  <li>
+                    focusing on feature development, form validation, and
+                    performance optimization.
+                  </li>
+                  <li>
+                    {" "}
+                    Worked extensively with TypeScript, Redux Toolkit, and React
+                    for the platform frontend.
+                  </li>
+                </ul>
+              </div>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
               contentStyle={{ background: "white", color: "#1e1e2c" }}
