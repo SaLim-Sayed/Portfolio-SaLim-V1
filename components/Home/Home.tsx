@@ -11,7 +11,7 @@ import ContactList from "./Contact/ContactList";
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-w-[100%] overflow-x-hidden">
       <Ads />
       <Hero />
       <About />

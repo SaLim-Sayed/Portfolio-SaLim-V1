@@ -6,7 +6,7 @@ import { Button, Image } from "@nextui-org/react";
 import { projectsList } from "./data";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
-import { Videotape,   } from "lucide-react";
+import { Github, Videotape,   } from "lucide-react";
 import { Fade } from "react-swift-reveal";
 const Projects = () => {
   const title = (
@@ -26,7 +26,7 @@ const Projects = () => {
     <div className="bg-slate-200 py-6" id="Projects">
       <Center>
         <Title title={title} />
-        <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-6  md:grid-cols-2">
+        <div className="w-[90%] md:w-[80%] my-5 mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-6  md:grid-cols-2">
           {projectsList.map((item) => (
             <Fade
               duration={1000}
@@ -37,7 +37,7 @@ const Projects = () => {
             >
               <Card
                 isFooterBlurred
-                className="  overflow-hidden  flex flex-col  bg-black/60 justify-between h-[500px] w-[400px] min-w-full"
+                className="  overflow-hidden  flex flex-col  bg-black/60 justify-between h-[500px] w-[300px] md:w-[400px] min-w-full"
               >
                 <CardHeader className="absolute z-10 top-0 flex-col  bg-black/60">
                   <p className="  uppercase text-3xl font-bold text-white">
@@ -62,28 +62,22 @@ const Projects = () => {
                         key={tool.id}
                         bottom
                       >
-                        <Button className="  w-40 text-tiny font-light">
+                        <Button className="  w-28 text-tiny font-light">
                           {tool.icon} {tool.name}
                         </Button>
                       </Fade>
                     ))}
                   </div>
                 </CardBody>
-                <CardFooter className=" bottom-0  p-2  bg-black/40   z-10 border-t-1 border-default-600 dark:border-default-100 flex justify-around">
+                <CardFooter className=" bottom-0  w-[99%] mx-auto  bg-black/40  gap-2  z-10 border-t-1 border-default-600 dark:border-default-100 flex justify-around">
                   <Link target="_blank" href={item.github}>
                     <Button color="danger" size="lg">
-                      <Image
-                        src="/tech/github.svg"
-                        width={30}
-                        height={30}
-                        alt="css"
-                      />{" "}
-                      Github
+                      <Github size={15} /> Github
                     </Button>
                   </Link>
                   <Link target="_blank" href={item.demo}>
                     <Button color="warning" size="lg">
-                      <Videotape /> Live Demo
+                      <Videotape size={15} /> <div className="text-xs md:text-sm">Live demo</div>
                     </Button>
                   </Link>
                 </CardFooter>

@@ -43,7 +43,7 @@ const Hero = ({}: IProps) => {
                 desc="Software Engineer ( Frontend )"
               />
             </div>
-            <div className="flex gap-6">
+            <div className="flex w-[300px] gap-2">
               <Fade duration={1000} delay={500} distance="200px" left>
                 <Button color="success" variant="ghost" size="lg">
                   <Link
