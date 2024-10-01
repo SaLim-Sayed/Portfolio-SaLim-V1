@@ -5,11 +5,9 @@ export default function useSchema() {
     name: z.string().min(3),
     email: z
       .string()
-      .email({
-        message: "email",
-      })
+      .email( )
       .min(5),
-    message: z.string().min(10),
+    message: z.string().min(4),
   });
 
   return validator;

@@ -20,7 +20,7 @@ const ContactUs = () => {
       >
         <Image src="S_logo.jpeg" alt="LOGO" width={30} height={30} />
       </Button>
-      <Typewriter text="Contact Us" delay={1000} cursor={false} />
+      <Typewriter text="Contact Me" delay={1000} cursor={false} />
     </div>
   );
   return (

@@ -38,6 +38,11 @@ export const TechstackList = [
     icon: <Image src="/tech/react.svg" width={30} height={30} alt="css" />,
   },
   {
+    id: 7,
+    name: "React Native",
+    icon: <Image src="/tech/react.svg" width={30} height={30} alt="css" />,
+  },
+  {
     id: 8,
     name: "Nextjs",
     icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,

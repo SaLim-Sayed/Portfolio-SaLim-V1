@@ -1,38 +1,36 @@
 "use client";
-import Hero from "./Hero";
+import { Button } from "@nextui-org/react";
+import Link from "next/link";
+import { FaArrowUp } from "react-icons/fa";
 import About from "./About/About";
+import ContactUs from "./Contact/ContactUs";
+import Hero from "./Hero";
+import Projects from "./Project/Projects";
 import TeckStack from "./TechStack/TeckStack";
 import WorkExp from "./Work/WorkExp";
-import ScrollToTop from "react-scroll-to-top";
-import Projects from "./Project/Projects";
-import Ads from "../Global/Ads";
-import ContactUs from "./Contact/ContactUs";
-import ContactList from "./Contact/ContactList";
 
 const Home = () => {
   return (
-    <div className="max-w-[100%] overflow-x-hidden">
-      <Ads />
+    <div className="max-w-[100%] overflow-x-hidden relative">
+      {/* <Ads /> */}
       <Hero />
       <About />
       <WorkExp />
       <TeckStack />
       <Projects />
       <ContactUs />
-      {/* <ContactList/> */}
-      <ScrollToTop
-        smooth
-        color="#f29f67"
-        style={{
-          backgroundColor: "#000",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "40px",
-          height: "40px",
-          borderRadius: "50%",
-        }}
-      />
+      
+      <Button
+        size="lg"
+        isIconOnly
+        className="fixed rounded-full bg-cyan-600 text-white z-50 bottom-10 right-10 animate-bounce"
+        color="primary"
+        variant="bordered"
+      >
+        <Link href={"#main"}>
+          <FaArrowUp size={20} />
+        </Link>
+      </Button>
     </div>
   );
 };

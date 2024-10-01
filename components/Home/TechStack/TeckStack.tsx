@@ -24,7 +24,7 @@ const TeckStack = () => {
     <div className="bg-slate-100 py-6" id="techStack">
       <Center>
         <Title title={title} />
-        <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-2 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-4">
+        <div className="w-full md:w-[80%] my-5 mx-auto grid grid-cols-2 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-3 lg:grid-cols-4">
           {TechstackList.map((item) => (
             <Fade
               duration={1000}

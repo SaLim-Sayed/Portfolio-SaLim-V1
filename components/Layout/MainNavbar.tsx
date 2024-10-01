@@ -24,7 +24,7 @@ export default function MainNavbar() {
   const [isAcive, setIsAcive] = React.useState(1);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
+    <Navbar id="main" onMenuOpenChange={setIsMenuOpen} isBordered>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

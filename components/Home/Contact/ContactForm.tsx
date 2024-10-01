@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Input } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@nextui-org/react";
 import { z } from "zod";
 import { collection, addDoc } from "firebase/firestore"; // Import Firestore functions
 import useSchema from "./Schema";
@@ -65,7 +65,7 @@ const ContactForm = () => {
         <Input
           {...register("name")}
           type="text"
-          label={"Name"}
+          label={"Enter your name"}
           variant="bordered"
           className="w-full"
           isInvalid={errors.name ? true : false}
@@ -80,7 +80,7 @@ const ContactForm = () => {
         <Input
           {...register("email")}
           type="email"
-          label={"Email"}
+          label={" Enter your email"}
           variant="bordered"
           className="w-full"
           isInvalid={errors.email ? true : false}
@@ -92,10 +92,9 @@ const ContactForm = () => {
         />
       </div>
       <div>
-        <Input
+        <Textarea
           {...register("message")}
-          type="text"
-          label={"Message"}
+          label={"Leave a message"}
           variant="bordered"
           className="w-full"
           isInvalid={errors.message ? true : false}
@@ -105,6 +104,7 @@ const ContactForm = () => {
             input: "text-[1.2rem]",
           }}
         />
+        
       </div>
       <Button
         type="submit"
