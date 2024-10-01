@@ -36,7 +36,9 @@ const Projects = () => {
               bottom
             >
               <Card
+                onClick={() => window.open(item.demo, "_blank")}
                 isFooterBlurred
+                isPressable
                 className="  overflow-hidden  flex flex-col  bg-black/60 justify-between h-[500px] w-[300px] md:w-[400px] min-w-full"
               >
                 <CardHeader className="absolute z-10 top-0 flex-col  bg-black/60">
@@ -77,7 +79,8 @@ const Projects = () => {
                   </Link>
                   <Link target="_blank" href={item.demo}>
                     <Button color="warning" size="lg">
-                      <Videotape size={15} /> <div className="text-xs md:text-sm">Live demo</div>
+                      <Videotape size={15} />{" "}
+                      <div className="text-xs md:text-sm">Live demo</div>
                     </Button>
                   </Link>
                 </CardFooter>
