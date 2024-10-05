@@ -123,7 +123,7 @@ const WorkExp = () => {
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">
-                Senior Frontend React Developer
+                  Frontend React Developer
               </h3>
               <h4 className="vertical-timeline-element-subtitle font-bold">
                 @ SQM , Egypt

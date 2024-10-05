@@ -8,6 +8,7 @@ import Hero from "./Hero";
 import Projects from "./Project/Projects";
 import TeckStack from "./TechStack/TeckStack";
 import WorkExp from "./Work/WorkExp";
+import Ads from "../Global/Ads";
 
 const Home = () => {
   return (
