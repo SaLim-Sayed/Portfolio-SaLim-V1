@@ -45,6 +45,7 @@ const Hero = ({}: IProps) => {
               className="flex items-center gap-2"
               target="_blank"
               href="/CV.pdf"
+              download="SalimSayed sr_frontend CV.pdf"
             >
               My Resume
               <File />
