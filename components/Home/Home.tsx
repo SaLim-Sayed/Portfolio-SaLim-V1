@@ -12,7 +12,7 @@ import WorkExp from "./Work/WorkExp";
 const Home = () => {
   return (
     <div className="max-w-[100%] overflow-x-hidden relative">
-      {/* <Ads /> */}
+      <Ads />
       <Hero />
       <About />
       <WorkExp />
