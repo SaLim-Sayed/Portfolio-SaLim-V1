@@ -3,13 +3,27 @@ import Center from "@/components/Global/Ui/Center";
 import { Button, Image } from "@nextui-org/react";
 import React from "react";
 import { Fade } from "react-swift-reveal";
+import Typewriter from "react-ts-typewriter";
 
 const About = () => {
+  const title = (
+    <div className="flex justify-center items-center">
+      <Button
+            isIconOnly
+            size="lg"
+            variant="light"
+            className="w-20 h-20 flex gap-2"
+          >
+            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+          </Button>
+      <Typewriter text="About Me" delay={1000} cursor={false} />
+    </div>
+  );
   return (
     <>
       <div className="bg-slate-100 py-4  " id="about">
         <Center>
-          <Title title="About Me" />
+          <Title title={title} />
 
           <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
             <Fade duration={1000} delay={500} distance="200px" bottom>

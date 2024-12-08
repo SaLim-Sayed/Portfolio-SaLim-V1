@@ -1,10 +1,12 @@
+import HydrationZustand from "@/components/Global/HydrationZustand";
+import MainLoader from "@/components/Global/MainLoader";
+import NextUi from "@/components/Global/NextUi";
+import Footer from "@/components/Layout/Footer";
+import MainNavbar from "@/components/Layout/MainNavbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "react-vertical-timeline-component/style.min.css";
 import "./globals.css";
-import HydrationZustand from "@/components/Global/HydrationZustand";
-import NextUi from "@/components/Global/NextUi";
-import MainLoader from "@/components/Global/MainLoader";
-import MainNavbar from "@/components/Layout/MainNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +17,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
-import "react-vertical-timeline-component/style.min.css";
-import Footer from "@/components/Layout/Footer";
-import Head from "next/head";
 export default function RootLayout({
   children,
 }: {

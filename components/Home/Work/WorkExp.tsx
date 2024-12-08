@@ -13,15 +13,15 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 const WorkExp = () => {
   const title = (
-    <div className="flex">
+    <div className="flex justify-center items-center">
       <Button
-        isIconOnly
-        size="lg"
-        variant="light"
-        className="w-10 h-10 flex gap-2"
-      >
-        <Image src="S_logo.jpeg" alt="LOGO" width={30} height={30} />
-      </Button>
+            isIconOnly
+            size="lg"
+            variant="light"
+            className="w-20 h-20 flex gap-2"
+          >
+            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+          </Button>
       <Typewriter text="PROFESSIONAL EXPERIENCE" delay={1000} cursor={false} />
     </div>
   );
