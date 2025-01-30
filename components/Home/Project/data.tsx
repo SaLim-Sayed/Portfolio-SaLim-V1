@@ -2,6 +2,48 @@ import Image from "next/image";
 export const projectsList = [
   {
     id: 1,
+    name: "4Dimension",
+    // icon: "/project/4Dimension.png",
+    github: "https://4dimension.vercel.app/",
+    demo: "https://4dimension.vercel.app/",
+    tools: [
+      {
+        id: 8,
+        name: "Nextjs",
+        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
+      },
+
+      {
+        id: 20,
+        name: "Next UI ",
+        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 22,
+        name: "Firebase",
+        icon: <Image src="/tech/firebase.png" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 10,
+        name: "Tailwind ",
+        icon: (
+          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
+        ),
+      },
+      {
+        id: 5,
+        name: "TypeScript",
+        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
+      },
+      {
+        id: 22,
+        name: "EmailJs",
+        icon: <Image src="/tech/emailjs.png" width={30} height={30} alt="css" />,
+      },
+    ],
+  },
+  {
+    id: 1,
     name: "Maxicano",
     icon: "/project/maxicano.png",
     github: "https://github.com/SaLim-Sayed/maxicano",

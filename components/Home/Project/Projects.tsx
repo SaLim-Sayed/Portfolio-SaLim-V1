@@ -6,19 +6,19 @@ import { Button, Image } from "@nextui-org/react";
 import { projectsList } from "./data";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
-import { Github, Videotape,   } from "lucide-react";
+import { Github, Videotape } from "lucide-react";
 import { Fade } from "react-swift-reveal";
 const Projects = () => {
   const title = (
     <div className="flex justify-center items-center">
       <Button
-            isIconOnly
-            size="lg"
-            variant="light"
-            className="w-20 h-20 flex gap-2"
-          >
-            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-          </Button>
+        isIconOnly
+        size="lg"
+        variant="light"
+        className="w-20 h-20 flex gap-2"
+      >
+        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+      </Button>
       <Typewriter text="Top Recent Projects" delay={1000} cursor={false} />
     </div>
   );
@@ -39,23 +39,31 @@ const Projects = () => {
                 onClick={() => window.open(item.demo, "_blank")}
                 isFooterBlurred
                 isPressable
-                className="  overflow-hidden  flex flex-col  bg-black/60 justify-between h-[500px] w-[300px] md:w-[400px] min-w-full"
+                className="  group overflow-hidden  flex flex-col bg-transparent   group-hover:bg-black/20 justify-between h-[700px] w-[300px] md:w-[400px] min-w-full"
               >
+                <div  className="absolute top-0 left-0 w-full h-full z-[-1] overflow-auto">
+                  <iframe
+                    src={item.demo}
+                    className="w-full h-full opacity-50 pointer-events-none"
+                    allowFullScreen
+                    sandbox="allow-scripts allow-same-origin"
+                  ></iframe>
+                </div>
                 <CardHeader className="absolute z-10 top-0 flex-col  bg-black/60">
                   <p className="  uppercase text-3xl font-bold text-white">
                     {item.name}
                   </p>
                 </CardHeader>
-                <CardBody className="  flex justify-center items-center gap-4 h-full">
-                  <div className="flex justify-center ">
-                    <Image
+                <CardBody className=" flex justify-center items-center gap-4 h-full">
+                  <div className=" justify-center ">
+                    {/* <Image
                       isZoomed
                       alt="Relaxing app background"
                       className="z-0 w-full h-[200px] object-cover cursor-pointer"
                       src={item.icon}
-                    />
+                    />   */}
                   </div>
-                  <div className=" grid grid-cols-2 gap-4">
+                  <div className="hidden group-hover:grid grid-cols-2 gap-4">
                     {item.tools.map((tool) => (
                       <Fade
                         duration={1000}
