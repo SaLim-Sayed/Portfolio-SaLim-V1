@@ -9,13 +9,13 @@ const About = () => {
   const title = (
     <div className="flex justify-center items-center">
       <Button
-            isIconOnly
-            size="lg"
-            variant="light"
-            className="w-20 h-20 flex gap-2"
-          >
-            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-          </Button>
+        isIconOnly
+        size="lg"
+        variant="light"
+        className="w-20 h-20 flex gap-2"
+      >
+        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+      </Button>
       <Typewriter text="About Me" delay={1000} cursor={false} />
     </div>
   );
@@ -41,15 +41,11 @@ const About = () => {
             <Fade duration={1000} delay={500} distance="200px" bottom>
               <div className="flex items-center p-5 ">
                 <p className="    leading-8 text-justify">
-                  Highly skilled Senior Frontend Developer with 3+ years of
-                  experience in building responsive, user-centric web
-                  applications using React, Next.js, and React Native.
-                  Proficient in crafting interactive UIs, managing state with
-                  Redux and Zustand, and integrating APIs for seamless user
-                  experiences. Adept at optimizing performance, collaborating
-                  with cross-functional teams, and employing the latest
-                  technologies to deliver scalable solutions in the banking,
-                  e-commerce, and real estate sectors.
+                  Frontend Developer with 4 years of experience building modern, responsive web and mobile applications.
+                  Specialized in React, Next.js, and React Native with strong expertise in TypeScript, state management (Redux
+                  Toolkit, Zustand), and API integration. Proven track record delivering scalable solutions in banking, e-commerce,
+                  travel, and real estate platforms. Passionate about UI/UX excellence, performance optimization, and writing
+                  clean, maintainable code.
                 </p>
               </div>
             </Fade>
