@@ -63,7 +63,7 @@ const Projects = () => {
                       src={item.icon}
                     />   */}
                   </div>
-                  <div className="hidden group-hover:grid grid-cols-2 gap-4">
+                  <div className="grid group-hover:grid grid-cols-2 gap-4">
                     {item.tools.map((tool) => (
                       <Fade
                         duration={1000}
