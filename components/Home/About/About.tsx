@@ -39,11 +39,11 @@ const About = () => {
               </Button>
             </Fade>
             <Fade duration={1000} delay={500} distance="200px" bottom>
-              <div className="flex items-center p-5 ">
+              <div className="flex items-center p-6 sm:p-1 ">
                 <p className="    leading-8 text-justify">
                   Frontend Developer with 4 years of experience building modern, responsive web and mobile applications.
-                  Specialized in React, Next.js, and React Native with strong expertise in TypeScript, state management (Redux
-                  Toolkit, Zustand), and API integration. Proven track record delivering scalable solutions in banking, e-commerce,
+                  Specialized in React, Next.js, and React Native with strong expertise in TypeScript , state management ( Redux
+                  Toolkit, Zustand ), and API integration . Proven track record delivering scalable solutions in banking , e-commerce,
                   travel, and real estate platforms. Passionate about UI/UX excellence, performance optimization, and writing
                   clean, maintainable code.
                 </p>
