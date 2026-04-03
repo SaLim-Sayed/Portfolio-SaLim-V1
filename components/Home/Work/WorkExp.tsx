@@ -31,162 +31,135 @@ const WorkExp = () => {
         <Title title={title} />
         <Fade duration={1000} delay={500} distance="200px" bottom>
           <VerticalTimeline>
+            {/* Bank Albilad */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
               contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  white",
-              }}
-              date="2024 - present"
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="Oct 2025 - Present"
               iconStyle={{ background: "#1e1e2c", color: "#fff" }}
               icon={<SiReact />}
             >
-              <h3 className="vertical-timeline-element-title text-lg font-bold">
-               Senior Frontend React Native Developer 
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle font-bold">
-                @ CIB Egypt
-              </h4>
-
-              <Listbox>
-                <ListboxItem
-                  key="new"
-                  className="text-danger font-bold text-lg"
-                  color="danger"
-                >
-                  I am Responsible for:
-                </ListboxItem>
-                <ListboxItem key="new">
-                  •Developing and implementing user interfaces,
-                </ListboxItem>
-                <ListboxItem key="copy">
-                  •Creating dynamic and interactive .
-                </ListboxItem>
-
-                <ListboxItem key="edit">
-                  •Data fetching and API integration using RTKQuery.
-                </ListboxItem>
-                <ListboxItem key="4">• state management with RTK.</ListboxItem>
-              </Listbox>
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ Bank Albilad</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Developing mobile banking features using React Native and TypeScript.</li>
+                <li>Building scalable, reusable component libraries aligned with the bank&apos;s design system.</li>
+                <li>Collaborating with product, design, and backend teams to deliver secure features.</li>
+              </ul>
             </VerticalTimelineElement>
+
+            {/* CIB Egypt */}
             <VerticalTimelineElement
-              visible={true}
               className="vertical-timeline-element--work"
+              visible={true}
               contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  white",
-              }}
-              date="2023 - present"
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="Jan 2024 - Oct 2025"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Frontend Developer</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ Commercial International Bank (CIB)</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Drove frontend development of React Native mobile banking apps using TypeScript.</li>
+                <li>Built and optimized financial modules in a monorepo using Redux and RTK Query.</li>
+                <li>Improved UI performance across complex banking workflows.</li>
+              </ul>
+            </VerticalTimelineElement>
+
+            {/* EJADA */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              visible={true}
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="Aug 2023 - Mar 2024"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Software Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ EJADA</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Developed secure mobile applications for Alrajhi Bank and Neoleap using React Native.</li>
+                <li>Implemented best practices in mobile application security for financial data.</li>
+                <li>Enhanced user experience in the banking fintech sector.</li>
+              </ul>
+            </VerticalTimelineElement>
+
+            {/* OFFTO */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              visible={true}
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="Aug 2022 - Aug 2023"
               iconStyle={{ background: "#1e1e2c", color: "#fff" }}
               icon={<SiNextdotjs />}
             >
-              <h3 className="vertical-timeline-element-title text-lg font-bold">
-                Frontend Next Developer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle font-bold">
-                @ OFFTO
-              </h4>
-
-              <Listbox>
-                <ListboxItem
-                  key="new"
-                  className="text-danger font-bold text-lg"
-                  color="danger"
-                >
-                  I am Responsible for:
-                </ListboxItem>
-                <ListboxItem key="2">
-                  •Developing and implementing user interfaces,
-                </ListboxItem>
-                <ListboxItem key="copy">
-                  •Creating dynamic and interactive UIs using Next Ui.
-                </ListboxItem>
-
-                <ListboxItem key="edit">
-                  • API integration using React Query Axios.
-                </ListboxItem>
-                <ListboxItem key="4">
-                  • State management using Redux and Zustand.
-                </ListboxItem>
-              </Listbox>
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Engineer (React & React Native)</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ OFFTO, Kuwait</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Developed React Native mobile apps and React.js web dashboards.</li>
+                <li>Built cross-platform shared components for consistent UX across devices.</li>
+                <li>Implemented state management with Zustand and data fetching using React Query.</li>
+              </ul>
             </VerticalTimelineElement>
-            <VerticalTimelineElement
-              visible={true}
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  white",
-              }}
-              date="10-2021 - 4-2023"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
-              icon={<SiReact />}
-            >
-              <h3 className="vertical-timeline-element-title text-lg font-bold">
-                  Frontend React Developer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle font-bold">
-                @ SQM , Egypt
-              </h4>
 
-              <div className="text-danger font-bold text-lg">
-                I am Responsible for:
-              </div>
-              <div className="text-xs">
-                <ul className="list-disc">
-                  <li>Built a comprehensive real estate admin platform,</li>
-                  <li>
-                    focusing on feature development, form validation, and
-                    performance optimization.
-                  </li>
-                  <li>
-                    {" "}
-                    Worked extensively with TypeScript, Redux Toolkit, and React
-                    for the platform frontend.
-                  </li>
-                </ul>
-              </div>
-            </VerticalTimelineElement>
+            {/* SQM */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
               contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  white",
-              }}
-              date="2022 - 2023"
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="Oct 2021 - Aug 2022"
               iconStyle={{ background: "#1e1e2c", color: "#fff" }}
               icon={<SiReact />}
             >
-              <h3 className="vertical-timeline-element-title text-lg font-bold">
-                Frontend React Developer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle font-bold">
-                @ Future of Egypt ,Egypt Army
-              </h4>
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Developer</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ SQM, Egypt</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Built a comprehensive real estate admin platform using React, React Native, and TS.</li>
+                <li>Created shared UI components compatible with web and mobile.</li>
+                <li>Focused on feature development, form validation, and performance.</li>
+              </ul>
+            </VerticalTimelineElement>
 
-              <Listbox>
-                <ListboxItem
-                  key="new"
-                  className="text-danger font-bold text-lg"
-                  color="danger"
-                >
-                  I am Responsible for:
-                </ListboxItem>
-                <ListboxItem key="new">
-                  •Developing and implementing user interfaces,
-                </ListboxItem>
-                <ListboxItem key="copy">
-                  •Creating dynamic and interactive UIs using MUI Ui.
-                </ListboxItem>
+            {/* GoTag */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              visible={true}
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="2020 - Sep 2021"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Developer (React & React Native)</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ GoTag, Egypt</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Built smart school mobile apps to automate attendance, payments, and communication.</li>
+                <li>Delivered seamless cross-platform solutions for educational automation.</li>
+              </ul>
+            </VerticalTimelineElement>
 
-                <ListboxItem key="edit">
-                  •Data fetching and API integration using Axios.
-                </ListboxItem>
-                <ListboxItem key="4">
-                  • state management with Context Api.
-                </ListboxItem>
-              </Listbox>
+            {/* Freelance */}
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              visible={true}
+              contentStyle={{ background: "white", color: "#1e1e2c" }}
+              contentArrowStyle={{ borderRight: "7px solid white" }}
+              date="2019"
+              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              icon={<SiReact />}
+            >
+              <h3 className="vertical-timeline-element-title text-lg font-bold">Freelance React Native Developer</h3>
+              <h4 className="vertical-timeline-element-subtitle font-bold">@ Startups</h4>
+              <ul className="mt-2 list-disc list-inside text-sm space-y-1">
+                <li>Built multiple cross-platform apps using React Native, Expo, and Firebase.</li>
+                <li>Implemented core features like authentication, push notifications, and API integration.</li>
+              </ul>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </Fade>

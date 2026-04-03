@@ -1,0 +1,79 @@
+"use client";
+import Title from "@/components/Global/Title";
+import Center from "@/components/Global/Ui/Center";
+import { Button, Card, CardBody, Image } from "@nextui-org/react";
+import React from "react";
+import { Fade } from "react-swift-reveal";
+import Typewriter from "react-ts-typewriter";
+import { GraduationCap, Calendar, Award } from "lucide-react";
+
+const Education = () => {
+  const title = (
+    <div className="flex justify-center items-center">
+      <Button
+        isIconOnly
+        size="lg"
+        variant="light"
+        className="w-20 h-20 flex gap-2"
+      >
+        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+      </Button>
+      <Typewriter text="EDUCATION" delay={1000} cursor={false} />
+    </div>
+  );
+
+  const educationData = [
+    {
+      degree: "B.Sc. Computer Science & Engineering",
+      institution: "Faculty of Electronic Engineering / Menoufia University",
+      period: "Sep 2017 – Jul 2022",
+      details: "Degree: Very Good [82%] | Graduation Project: CareMe - healthcare app (Grade: Excellent)",
+      icon: <GraduationCap className="text-blue-500" size={24} />,
+    },
+    {
+      degree: "MERN Stack Developer Track",
+      institution: "Information Technology Institute (ITI)",
+      period: "Jul 2022 – Oct 2022",
+      details: "Intensive 3-month track focused on full-stack web development using MongoDB, Express.js, React, and Node.js.",
+      icon: <Award className="text-orange-500" size={24} />,
+    }
+  ];
+
+  return (
+    <div className="bg-slate-100 py-12" id="Education">
+      <Center>
+        <Title title={title} />
+        <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          {educationData.map((edu, index) => (
+            <Fade key={index} duration={1000} delay={index * 200} distance="50px" bottom>
+              <Card className="border-none bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <CardBody className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-slate-50 rounded-2xl">
+                      {edu.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-800">{edu.degree}</h3>
+                      <p className="text-blue-600 font-semibold mt-1">{edu.institution}</p>
+                      
+                      <div className="flex items-center gap-2 mt-3 text-slate-500 text-sm">
+                        <Calendar size={14} />
+                        <span>{edu.period}</span>
+                      </div>
+                      
+                      <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        {edu.details}
+                      </p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </Fade>
+          ))}
+        </div>
+      </Center>
+    </div>
+  );
+};
+
+export default Education;

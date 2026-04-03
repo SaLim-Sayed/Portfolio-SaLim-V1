@@ -8,6 +8,7 @@ import Hero from "./Hero";
 import Projects from "./Project/Projects";
 import TeckStack from "./TechStack/TeckStack";
 import WorkExp from "./Work/WorkExp";
+import Education from "./Education/Education";
 import Ads from "../Global/Ads";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <About />
       <WorkExp />
+      <Education />
       <TeckStack />
       <Projects />
       <ContactUs />

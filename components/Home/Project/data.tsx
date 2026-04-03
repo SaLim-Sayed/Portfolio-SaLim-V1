@@ -2,417 +2,217 @@ import Image from "next/image";
 export const projectsList = [
   {
     id: 1,
-    name: "4Dimension",
-    // icon: "/project/4Dimension.png",
-    github: "https://4dimension.vercel.app/",
-    demo: "https://4dimension.vercel.app/",
+    name: "OFFTO - Travel Booking",
+    description: "A premium flight and hotel booking platform designed for a seamless travel experience. Features real-time search, package deals, and a mobile-first responsive UI.",
+    image: "/project/offto.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://offto.com.kw/",
     tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 20,
-        name: "Next UI ",
-        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Firebase",
-        icon: <Image src="/tech/firebase.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "EmailJs",
-        icon: <Image src="/tech/emailjs.png" width={30} height={30} alt="css" />,
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "Maxicano",
-    icon: "/project/maxicano.png",
-    github: "https://github.com/SaLim-Sayed/maxicano",
-    demo: "https://maxicano.com/",
-    tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 20,
-        name: "Next UI ",
-        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Firebase",
-        icon: <Image src="/tech/firebase.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "EmailJs",
-        icon: <Image src="/tech/emailjs.png" width={30} height={30} alt="css" />,
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "MaroCare",
-    icon: "/project/MaroCare.png",
-    github: "https://github.com/SaLim-Sayed/Ecommerce-v1",
-    demo: "https://www.marocares.com",
-    tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 20,
-        name: "Next UI ",
-        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "Shopzila",
-    icon: "/project/shopzila.png",
-    github: "https://github.com/SaLim-Sayed/Shoppzila-v1",
-    demo: "https://shoppzila-v3.vercel.app/",
-    tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 20,
-        name: "Next UI ",
-        icon: <Image src="/tech/next.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 2, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 3, name: "Redux", icon: <Image src="/tech/redux.png" width={30} height={30} alt="redux" /> },
+      { id: 4, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 5, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 6, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 7, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 8, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
     ],
   },
   {
     id: 2,
-    name: "Social Media ",
-    icon: "/project/social.png",
-    github: "https://github.com/SaLim-Sayed/social-media-next/",
-    demo: "https://social-media-next-v2.vercel.app/",
+    name: "Ersa Admin Panel",
+    description: "Comprehensive business management dashboard with real-time analytics, user activity tracking, and project monitoring. Built with a focus on data visualization and accessibility.",
+    image: "/project/ersa.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://site-akhawen.ersaiss.com/en",
     tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 22,
-        name: "Chakra UI ",
-        icon: <Image src="/tech/chakra.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Zustand",
-        icon: (
-          <Image src="/tech/zustand.png" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 5,
-        name: "TypeScript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "Movie Store",
-    icon: "/project/movie.png",
-    github: "https://github.com/SaLim-Sayed/movies-store",
-    demo: "https://movies-store-v1-salim-sayeds-projects.vercel.app/",
-    tools: [
-      {
-        id: 7,
-        name: "React JS",
-        icon: <Image src="/tech/react.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 3,
-        name: "Bootstrap",
-        icon: (
-          <Image src="/tech/bootstrap.png" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 4,
-        name: "Typescript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "React", icon: <Image src="/tech/react.svg" width={30} height={30} alt="react" /> },
+      { id: 2, name: "Redux Toolkit", icon: <Image src="/tech/redux.png" width={30} height={30} alt="rtk" /> },
+      { id: 3, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 4, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 5, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 6, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 7, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 8, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
     ],
   },
   {
     id: 3,
-    name: "Medical Clinic",
-    icon: "/project/medical.png",
-    github: "https://github.com/SaLim-Sayed/medical-clinic",
-    demo: "https://medical-clinic.onrender.com/",
+    name: "MaroCare Ecommerce",
+    description: "Personalized ecommerce platform for healthcare products. Features Zustand state management, React Query for efficient data fetching, and a clean, responsive shopping experience.",
+    image: "/project/MaroCare.png",
+    github: "https://github.com/SaLim-Sayed/Ecommerce-v1",
+    demo: "https://www.marocares.com",
     tools: [
-      {
-        id: 8,
-        name: "Nextjs",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 22,
-        name: "Chakra UI ",
-        icon: <Image src="/tech/chakra.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 10,
-        name: "Tailwind ",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 4,
-        name: "Javascript",
-        icon: <Image src="/tech/js.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 2, name: "Zustand", icon: <Image src="/tech/zustand.png" width={30} height={30} alt="zustand" /> },
+      { id: 3, name: "React Query", icon: <Image src="/tech/query.png" width={30} height={30} alt="query" /> },
+      { id: 4, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 5, name: "Zod", icon: <Image src="/tech/zod.png" width={30} height={30} alt="zod" /> },
+      { id: 6, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 7, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 8, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 9, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
+    ],
+  },
+  {
+    id: 4,
+    name: "Maxicano Brand",
+    description: "Brand showcase and ecommerce landing page for a food processing company. Integrated with Firebase for dynamic content and real-time order management.",
+    image: "/project/maxicano.png",
+    github: "https://github.com/SaLim-Sayed/maxicano",
+    demo: "https://maxicano.com/",
+    tools: [
+      { id: 1, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 2, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 3, name: "Firebase", icon: <Image src="/tech/firebase.png" width={30} height={30} alt="firebase" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 7, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
+      { id: 8, name: "Framer", icon: <Image src="/tech/framer.png" width={30} height={30} alt="framer" /> },
     ],
   },
   {
     id: 5,
-    name: "Blog Design",
-    icon: "/project/blog.png",
-    github: "https://github.com/SaLim-Sayed/Blog-Design",
-    demo: "https://blog-design-salim.vercel.app/",
+    name: "4 Dimensions Engineering",
+    description: "Professional architectural and engineering consultancy portfolio. Showcasing projects with high-quality imagery and a minimalist design aesthetic.",
+    image: "/project/4dim.png",
+    github: "https://4dimension.vercel.app/",
+    demo: "https://4dimension.vercel.app/",
     tools: [
-      {
-        id: 7,
-        name: "Next JS",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "React Query",
-        icon: <Image src="/tech/query.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 3,
-        name: "Bootstrap",
-        icon: (
-          <Image src="/tech/bootstrap.png" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 4,
-        name: "Javascript",
-        icon: <Image src="/tech/js.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    name: "Product cart",
-    icon: "/project/product.png",
-    github: "https://github.com/SaLim-Sayed/anime_next",
-    demo: "https://anime-next-gamma.vercel.app/",
-    tools: [
-      {
-        id: 7,
-        name: "React JS",
-        icon: <Image src="/tech/react.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 3,
-        name: "Tailwind",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 4,
-        name: "Typescript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Redux",
-        icon: <Image src="/tech/redux.png" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "React", icon: <Image src="/tech/react.svg" width={30} height={30} alt="react" /> },
+      { id: 2, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 3, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 7, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
+      { id: 8, name: "Framer", icon: <Image src="/tech/framer.png" width={30} height={30} alt="framer" /> },
     ],
   },
   {
-    id: 5,
-    name: "Anime Design",
-    icon: "/project/anim.png",
-    github: "https://github.com/SaLim-Sayed/anime_next",
-    demo: "https://anime-next-gamma.vercel.app/",
+    id: 6,
+    name: "GoTag Parent App",
+    description: "Mobile-first IoT tracking application for parents. Real-time child location updates, geofencing (school zones), and status monitoring with Firebase integration.",
+    image: "/project/gotag.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://www.gotag.co/",
     tools: [
-      {
-        id: 7,
-        name: "Next JS",
-        icon: <Image src="/tech/next.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Framer Motion",
-        icon: <Image src="/tech/framer.png" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 3,
-        name: "Tailwind",
-        icon: (
-          <Image src="/tech/tailwind.svg" width={30} height={30} alt="css" />
-        ),
-      },
-      {
-        id: 4,
-        name: "Typescript",
-        icon: <Image src="/tech/ts.svg" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "React Native", icon: <Image src="/tech/react.svg" width={30} height={30} alt="rn" /> },
+      { id: 2, name: "Firebase", icon: <Image src="/tech/firebase.png" width={30} height={30} alt="firebase" /> },
+      { id: 3, name: "IoT Integration", icon: <Image src="/tech/js.svg" width={30} height={30} alt="iot" /> },
+      { id: 4, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 5, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 6, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 7, name: "Redux", icon: <Image src="/tech/redux.png" width={30} height={30} alt="redux" /> },
     ],
   },
   {
-    id: 5,
-    name: "pyramids-investment",
-    icon: "/project/pyramid.png",
-    github: "https://github.com/SaLim-Sayed/pyramids-investemnt",
-    demo: "https://pyramids-investemnt.vercel.app/",
+    id: 7,
+    name: "Wishtv Streaming",
+    description: "Cross-platform mobile streaming application dedicated to entertainment and live broadcasts. Optimized for high-performance video delivery and smooth playback.",
+    image: "/project/movie.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "#",
     tools: [
-      {
-        id: 8,
-        name: "HTML",
-        icon: <Image src="/tech/html.svg" width={30} height={30} alt="css" />,
-      },
-      {
-        id: 22,
-        name: "Css",
-        icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" />,
-      },
-
-      {
-        id: 4,
-        name: "Javascript",
-        icon: <Image src="/tech/js.svg" width={30} height={30} alt="css" />,
-      },
+      { id: 1, name: "React Native", icon: <Image src="/tech/react.svg" width={30} height={30} alt="rn" /> },
+      { id: 2, name: "Streaming API", icon: <Image src="/tech/node.png" width={30} height={30} alt="api" /> },
+      { id: 3, name: "Redux", icon: <Image src="/tech/redux.png" width={30} height={30} alt="redux" /> },
+      { id: 4, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 5, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 6, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 7, name: "Firebase", icon: <Image src="/tech/firebase.png" width={30} height={30} alt="firebase" /> },
+    ],
+  },
+  {
+    id: 8,
+    name: "Gawad Equestrian",
+    description: "Lifestyle companion app for equestrian enthusiasts. Features map integration for tracking rides and managing horse care routines on the go.",
+    image: "/project/anim.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://play.google.com/store/apps/details?id=com.JAWAD",
+    tools: [
+      { id: 1, name: "React Native", icon: <Image src="/tech/react.svg" width={30} height={30} alt="rn" /> },
+      { id: 2, name: "Mapbox", icon: <Image src="/tech/js.svg" width={30} height={30} alt="maps" /> },
+      { id: 3, name: "Zustand", icon: <Image src="/tech/zustand.png" width={30} height={30} alt="zustand" /> },
+      { id: 4, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 5, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 6, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+    ],
+  },
+  {
+    id: 9,
+    name: "First Care",
+    description:
+      "Healthcare-focused web experience with localized content, clear service presentation, and a responsive layout built for patients and care seekers.",
+    image: "/project/firstcare.png",
+    github: "https://github.com/SaLim-Sayed/First-Care",
+    demo: "https://first-care-f617.vercel.app/en",
+    tools: [
+      { id: 1, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 2, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 3, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 7, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
+      { id: 8, name: "Zod", icon: <Image src="/tech/zod.png" width={30} height={30} alt="zod" /> },
+    ],
+  },
+  {
+    id: 10,
+    name: "CIB Mobile Banking",
+    description:
+      "Contributed as part of the engineering team on CIB’s mobile banking app for Egypt—secure accounts, transfers, and core banking flows for a large production user base.",
+    image: "/project/cib.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://play.google.com/store/search?q=cib&c=apps",
+    tools: [
+      { id: 1, name: "React Native", icon: <Image src="/tech/react.svg" width={30} height={30} alt="rn" /> },
+      { id: 2, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 3, name: "REST APIs", icon: <Image src="/tech/node.png" width={30} height={30} alt="api" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "Redux", icon: <Image src="/tech/redux.png" width={30} height={30} alt="redux" /> },
+      { id: 7, name: "JavaScript", icon: <Image src="/tech/js.svg" width={30} height={30} alt="js" /> },
+    ],
+  },
+  {
+    id: 11,
+    name: "urpay",
+    description:
+      "Contributed as part of the team behind urpay (Neoleap)—a digital wallet with payments, transfers, and financial services, focused on performance and a polished mobile experience.",
+    image: "/project/urpay.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://play.google.com/store/search?q=urpay&c=apps",
+    tools: [
+      { id: 1, name: "React Native", icon: <Image src="/tech/react.svg" width={30} height={30} alt="rn" /> },
+      { id: 2, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 3, name: "REST APIs", icon: <Image src="/tech/node.png" width={30} height={30} alt="api" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "Redux", icon: <Image src="/tech/redux.png" width={30} height={30} alt="redux" /> },
+      { id: 7, name: "Firebase", icon: <Image src="/tech/firebase.png" width={30} height={30} alt="firebase" /> },
+    ],
+  },
+  {
+    id: 12,
+    name: "BillQ Customer",
+    description:
+      "Customer-facing web experience for BillQ—clear billing workflows, account access, and a responsive UI tailored for business clients managing subscriptions and invoices.",
+    image: "/project/billqode.png",
+    github: "https://github.com/SaLim-Sayed",
+    demo: "https://customer.billq.co/",
+    tools: [
+      { id: 1, name: "Next.js", icon: <Image src="/tech/next.svg" width={30} height={30} alt="next" /> },
+      { id: 2, name: "Tailwind", icon: <Image src="/tech/tailwind.svg" width={30} height={30} alt="tailwind" /> },
+      { id: 3, name: "TypeScript", icon: <Image src="/tech/ts.svg" width={30} height={30} alt="ts" /> },
+      { id: 4, name: "Git", icon: <Image src="/tech/github.svg" width={30} height={30} alt="git" /> },
+      { id: 5, name: "Figma", icon: <Image src="/tech/figma.svg" width={30} height={30} alt="figma" /> },
+      { id: 6, name: "HTML", icon: <Image src="/tech/html.svg" width={30} height={30} alt="html" /> },
+      { id: 7, name: "CSS", icon: <Image src="/tech/css.svg" width={30} height={30} alt="css" /> },
+      { id: 8, name: "Zod", icon: <Image src="/tech/zod.png" width={30} height={30} alt="zod" /> },
     ],
   },
 ];

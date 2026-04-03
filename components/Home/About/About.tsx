@@ -1,6 +1,7 @@
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
 import { Button, Image } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 import { Fade } from "react-swift-reveal";
 import Typewriter from "react-ts-typewriter";
@@ -25,27 +26,31 @@ const About = () => {
         <Center>
           <Title title={title} />
 
-          <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 items-center justify-center justify-items-center   md:justify-items-around gap-4  md:grid-cols-2 ">
-            <Fade duration={1000} delay={500} distance="200px" bottom>
-              <Button size="lg" className="   w-full p-0  h-full bg-slate-100 ">
-                <Image
-                  isBlurred
-                  src="logo.jpg"
-                  alt=""
-                  width={300}
-                  height={300}
-                  className=" cursor-pointer  m-0  "
-                />
-              </Button>
+          <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-8">
+            <Fade duration={1000} delay={200} distance="50px" bottom>
+              <div className="flex justify-center md:justify-end">
+                <div className="p-2 bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-[350px] w-full">
+                  <div
+                    className="badge-base LI-profile-badge"
+                    data-locale="ar_AE"
+                    data-size="large"
+                    data-theme="light"
+                    data-type="HORIZONTAL"
+                    data-vanity="salim-elsayed981"
+                    data-version="v1"
+                  >
+                    <Link
+                      className="badge-base__link LI-simple-link"
+                      href="https://www.linkedin.com/in/salim-elsayed981?trk=profile-badge"
+                    ></Link>
+                  </div>
+                </div>
+              </div>
             </Fade>
-            <Fade duration={1000} delay={500} distance="200px" bottom>
-              <div className="flex items-center p-6 sm:p-1 ">
-                <p className="    leading-8 text-justify">
-                  Frontend Developer with 4 years of experience building modern, responsive web and mobile applications.
-                  Specialized in React, Next.js, and React Native with strong expertise in TypeScript , state management ( Redux
-                  Toolkit, Zustand ), and API integration . Proven track record delivering scalable solutions in banking , e-commerce,
-                  travel, and real estate platforms. Passionate about UI/UX excellence, performance optimization, and writing
-                  clean, maintainable code.
+            <Fade duration={1000} delay={500} distance="50px" bottom>
+              <div className="flex items-center p-6 sm:p-1">
+                <p className="leading-8 text-justify text-lg text-slate-700">
+                  Senior Frontend & Mobile Engineer with 5+ years of experience designing and developing scalable web and cross-platform mobile applications using React.js, React Native, Next.js, TypeScript, and modern JavaScript frameworks. Proven experience delivering high-performance digital products across fintech, banking, e-commerce, and SaaS solutions. Strong expertise in state management (Redux, RTK Query), RESTful API integration, performance optimization, and building responsive, accessible user interfaces. Adept at collaborating with cross-functional teams in agile environments to deliver secure, reliable, and production-ready applications at scale.
                 </p>
               </div>
             </Fade>

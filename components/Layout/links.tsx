@@ -20,7 +20,7 @@ export const links = [
   },
   {
     id: 6,
-    title: "Tech Stack",
+    title: "Skills",
     url: "#techStack",
     icon: <FcBiotech size={30} />,
   },
