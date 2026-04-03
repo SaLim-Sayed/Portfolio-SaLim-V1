@@ -27,7 +27,7 @@ const Hero = ({ }: IProps) => {
         <Title
           exStTitle="text-white text-center items-center justify-center"
           title={"Hello 👋 I'm"}
-          subTitle="Salim Sayed Salim Mohamed"
+          subTitle="Salim Sayed"
           desc="Senior Frontend / React Native Engineer"
         />
       </motion.div>
@@ -103,7 +103,7 @@ const Hero = ({ }: IProps) => {
 
       <Center>
         <ClientHydration LoaderComponent={<div className="h-[400px]" />}>
-          <div className="relative z-10 w-full md:w-[80%] mx-auto flex flex-col items-center justify-center py-12">
+          <div className="relative z-10 w-full mx-auto flex flex-col items-center justify-center py-12">
             {/* Content Column */}
             <div className="w-full flex flex-col items-center">
               {renderContent()}

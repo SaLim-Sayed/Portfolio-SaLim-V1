@@ -31,6 +31,7 @@ const Education = () => {
       institution: "Faculty of Electronic Engineering / Menoufia University",
       period: "Sep 2017 – Jul 2022",
       details: "Degree: Very Good [82%] | Graduation Project: CareMe - healthcare app (Grade: Excellent)",
+      stack: [],
       icon: <GraduationCap className="text-blue-500" size={24} />,
     },
     {
@@ -38,6 +39,7 @@ const Education = () => {
       institution: "Information Technology Institute (ITI)",
       period: "Jul 2022 – Oct 2022",
       details: "Intensive 3-month track focused on full-stack web development using MongoDB, Express.js, React, and Node.js.",
+      stack: ["MongoDB", "Express.js", "React", "Node.js"],
       icon: <Award className="text-orange-500" size={24} />,
     }
   ];
@@ -77,6 +79,11 @@ const Education = () => {
                       <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
                         {edu.details}
                       </p>
+                      <div className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4"> {edu.stack.map((stack, index) => (
+                        <span key={index} className="inline-flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-md text-[13px] font-medium text-slate-700 dark:text-zinc-300 bg-white/95 dark:bg-zinc-900/95 border border-slate-200/95 dark:border-zinc-700/90 shadow-[0_1px_0_0_rgba(15,23,42,0.05)] dark:shadow-none">
+                          {stack}
+                        </span>
+                      ))} </div>
                     </div>
                   </div>
                 </CardBody>

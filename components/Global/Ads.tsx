@@ -69,7 +69,7 @@ export default function Ads() {
           <Title
             title={title}
             exStTitle="text-white"
-            desc="Software Engineer [ Frontend ]"
+            desc="Senior Frontend / React Native Engineer"
           />
         </ModalBody>
       </ModalContent>
