@@ -1,19 +1,24 @@
-import {
-  Copyright,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-} from "lucide-react";
+"use client";
+
+import { Copyright } from "lucide-react";
 import Center from "../Global/Ui/Center";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
+import { easeOutExpo } from "@/libs/motion";
 
-interface IProps {}
+const Footer = () => {
+  const reduce = useReducedMotion();
 
-const Footer = ({}: IProps) => {
   return (
-    <div className=" bg-black ">
+    <motion.div
+      className="bg-black"
+      initial={reduce ? { opacity: 1 } : { opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: reduce ? 0 : 0.45, ease: easeOutExpo }}
+    >
       <Center>
         <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-4 text-white">
           <div className="flex font-bold">
@@ -34,7 +39,7 @@ const Footer = ({}: IProps) => {
                   src="/social/linked.png"
                   width={30}
                   height={30}
-                  alt="css"
+                  alt="LinkedIn"
                 />
               </Button>
             </Link>
@@ -48,7 +53,7 @@ const Footer = ({}: IProps) => {
                   src="/tech/github.svg"
                   width={30}
                   height={30}
-                  alt="css"
+                  alt="GitHub"
                 />
               </Button>
             </Link>
@@ -62,14 +67,14 @@ const Footer = ({}: IProps) => {
                   src="/social/whats.png"
                   width={30}
                   height={30}
-                  alt="css"
+                  alt="WhatsApp"
                 />
               </Button>
             </Link>
           </div>
         </div>
       </Center>
-    </div>
+    </motion.div>
   );
 };
 

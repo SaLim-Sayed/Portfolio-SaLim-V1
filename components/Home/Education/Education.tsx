@@ -3,11 +3,14 @@ import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
 import React from "react";
-import { Fade } from "react-swift-reveal";
+import { motion, useReducedMotion } from "framer-motion";
 import Typewriter from "react-ts-typewriter";
+import { easeOutExpo } from "@/libs/motion";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const Education = () => {
+  const reduce = useReducedMotion();
+
   const title = (
     <div className="flex justify-center items-center">
       <Button
@@ -40,13 +43,23 @@ const Education = () => {
   ];
 
   return (
-    <div className="bg-slate-100 py-12" id="Education">
+    <div className="bg-slate-100 py-12">
       <Center>
         <Title title={title} />
         <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {educationData.map((edu, index) => (
-            <Fade key={index} duration={1000} delay={index * 200} distance="50px" bottom>
-              <Card className="border-none bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <motion.div
+              key={index}
+              initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-32px" }}
+              transition={{
+                duration: reduce ? 0 : 0.48,
+                delay: reduce ? 0 : index * 0.1,
+                ease: easeOutExpo,
+              }}
+            >
+              <Card className="border-none bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
                 <CardBody className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-slate-50 rounded-2xl">
@@ -55,12 +68,12 @@ const Education = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-slate-800">{edu.degree}</h3>
                       <p className="text-blue-600 font-semibold mt-1">{edu.institution}</p>
-                      
+
                       <div className="flex items-center gap-2 mt-3 text-slate-500 text-sm">
                         <Calendar size={14} />
                         <span>{edu.period}</span>
                       </div>
-                      
+
                       <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
                         {edu.details}
                       </p>
@@ -68,7 +81,7 @@ const Education = () => {
                   </div>
                 </CardBody>
               </Card>
-            </Fade>
+            </motion.div>
           ))}
         </div>
       </Center>

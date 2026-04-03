@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import Center from "../Global/Ui/Center";
@@ -12,12 +14,14 @@ import ClientHydration from "../Global/ClientHydration";
 interface IProps { }
 
 const Hero = ({ }: IProps) => {
+  const reduce = useReducedMotion();
+
   const renderContent = () => (
     <div className="flex flex-col gap-6 items-center p-4 md:p-12 text-white text-center">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: reduce ? 0 : 0.8 }}
         className="text-4xl"
       >
         <Title
@@ -29,9 +33,9 @@ const Hero = ({ }: IProps) => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: reduce ? 0 : 0.8, delay: reduce ? 0 : 0.2 }}
         className="flex flex-wrap justify-center md:justify-start w-full gap-4"
       >
         <Button

@@ -195,10 +195,7 @@ const Projects = () => {
   );
 
   return (
-    <div
-      className="relative bg-slate-50 dark:bg-[#09090b] py-20 md:py-28 border-t border-slate-200/80 dark:border-zinc-800 overflow-hidden"
-      id="Projects"
-    >
+    <div className="relative bg-slate-50 dark:bg-[#09090b] py-20 md:py-28 border-t border-slate-200/80 dark:border-zinc-800 overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.2]"
         aria-hidden

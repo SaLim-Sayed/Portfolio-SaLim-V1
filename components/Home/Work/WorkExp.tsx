@@ -3,7 +3,6 @@ import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
 import { Button, Image, Listbox, ListboxItem } from "@nextui-org/react";
 import { SiNextdotjs, SiReact } from "react-icons/si";
-import { Fade } from "react-swift-reveal";
 import Typewriter from "react-ts-typewriter";
 
 import {
@@ -26,10 +25,9 @@ const WorkExp = () => {
     </div>
   );
   return (
-    <div className="bg-slate-200 py-6" id="WorkExperince">
+    <div className="bg-slate-200 py-6">
       <Center>
         <Title title={title} />
-        <Fade duration={1000} delay={500} distance="200px" bottom>
           <VerticalTimeline>
             {/* Bank Albilad */}
             <VerticalTimelineElement
@@ -162,7 +160,6 @@ const WorkExp = () => {
               </ul>
             </VerticalTimelineElement>
           </VerticalTimeline>
-        </Fade>
       </Center>
     </div>
   );

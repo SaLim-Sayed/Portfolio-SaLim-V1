@@ -99,7 +99,6 @@ const TeckStack = () => {
   return (
     <div
       className="relative bg-slate-50 dark:bg-[#09090b] py-16 md:py-24 border-t border-slate-200/80 dark:border-zinc-800 overflow-hidden"
-      id="techStack"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.3] dark:opacity-[0.15]"

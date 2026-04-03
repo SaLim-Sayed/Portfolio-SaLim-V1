@@ -1,7 +1,6 @@
 "use client";
-import { Button } from "@nextui-org/react";
-import Link from "next/link";
-import { FaArrowUp } from "react-icons/fa";
+import { AnimatedSection } from "@/components/Global/AnimatedSection";
+import { ScrollToTopFab } from "@/components/Global/ScrollToTopFab";
 import About from "./About/About";
 import ContactUs from "./Contact/ContactUs";
 import Hero from "./Hero";
@@ -16,24 +15,26 @@ const Home = () => {
     <div className="max-w-[100%] overflow-x-hidden relative">
       <Ads />
       <Hero />
-      <About />
-      <WorkExp />
-      <Education />
-      <TeckStack />
-      <Projects />
-      <ContactUs />
-      
-      <Button
-        size="lg"
-        isIconOnly
-        className="fixed rounded-full bg-cyan-600 text-white z-50 bottom-10 right-10 animate-bounce"
-        color="primary"
-        variant="bordered"
-      >
-        <Link href={"#main"}>
-          <FaArrowUp size={20} />
-        </Link>
-      </Button>
+      <AnimatedSection id="about">
+        <About />
+      </AnimatedSection>
+      <AnimatedSection id="WorkExperince" delay={0.04}>
+        <WorkExp />
+      </AnimatedSection>
+      <AnimatedSection id="Education" delay={0.06}>
+        <Education />
+      </AnimatedSection>
+      <AnimatedSection id="techStack" delay={0.08}>
+        <TeckStack />
+      </AnimatedSection>
+      <AnimatedSection id="Projects" delay={0.1}>
+        <Projects />
+      </AnimatedSection>
+      <AnimatedSection id="contact" delay={0.12}>
+        <ContactUs />
+      </AnimatedSection>
+
+      <ScrollToTopFab />
     </div>
   );
 };
