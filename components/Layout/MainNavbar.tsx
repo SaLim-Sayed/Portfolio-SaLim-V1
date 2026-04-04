@@ -33,18 +33,7 @@ export default function MainNavbar() {
         />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
-        <NavbarBrand>
-          <Button
-            isIconOnly
-            size="lg"
-            variant="light"
-            className="w-20 h-20 flex gap-2"
-          >
-            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-          </Button>
-        </NavbarBrand>
-      </NavbarContent>
+     
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
@@ -76,7 +65,7 @@ export default function MainNavbar() {
       </NavbarContent>
 
       <NavbarContent justify="end" className="gap-1 sm:gap-2">
-        <NavbarItem className="hidden sm:flex">
+        <NavbarItem className="">
           <ThemeSwitcher />
         </NavbarItem>
         <NavbarItem>
@@ -87,12 +76,11 @@ export default function MainNavbar() {
             </span>
           </Button>
         </NavbarItem>
+       
       </NavbarContent>
 
       <NavbarMenu>
-        <NavbarMenuItem className="flex sm:hidden w-full justify-end mb-2">
-          <ThemeSwitcher />
-        </NavbarMenuItem>
+       
         {links.map((item) => (
           <>
             <NavbarMenuItem key={item.id}>
