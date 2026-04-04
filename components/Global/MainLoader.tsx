@@ -21,8 +21,8 @@ const MainLoader = ({}: IProps) => {
       <Typewriter text="Top Recent Projects" loop delay={1000} cursor={false} />
     </div>
   );
-  return <div className="h-screen w-full flex  flex-col items-center justify-center">
-     <Spinner label="Welcome 👋! Wait ......" color="warning" />
+  return <div className="h-screen w-full flex flex-col items-center justify-center bg-background">
+     <Spinner label="Welcome 👋! Wait ......" color="primary" />
      <Title title={title} />
   </div>
 }

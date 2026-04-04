@@ -12,9 +12,9 @@ export function ScrollToTopFab() {
     <Button
       size="lg"
       isIconOnly
-      className="rounded-full bg-cyan-600 text-white z-50 shadow-lg shadow-cyan-900/20"
+      className="rounded-full z-50 shadow-xl"
       color="primary"
-      variant="bordered"
+      variant="shadow"
       aria-label="Back to top"
     >
       <Link href="#main">

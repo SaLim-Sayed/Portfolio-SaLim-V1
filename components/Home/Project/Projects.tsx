@@ -41,25 +41,25 @@ const ProjectRow = ({
       viewport={{ once: true, margin: "-56px" }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group/row relative flex flex-col md:flex-row md:items-center gap-10 md:gap-14 lg:gap-20 py-16 md:py-[5.25rem] border-b border-slate-200/90 dark:border-zinc-800/90 last:border-b-0",
+        "group/row relative flex flex-col md:flex-row md:items-center gap-10 md:gap-14 lg:gap-20 py-16 md:py-[5.25rem] border-b border-divider last:border-b-0",
         "rounded-2xl md:rounded-none md:mx-0 -mx-1 px-3 md:px-0",
-        "transition-colors duration-300 md:hover:bg-slate-100/40 dark:md:hover:bg-zinc-900/35"
+        "transition-colors duration-300 md:hover:bg-content2/50"
       )}
     >
       <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col justify-center text-left min-w-0 md:max-w-xl pl-1 md:pl-0 border-l-[3px] border-teal-600/25 dark:border-teal-500/30 md:border-l-0 md:border-none">
         <div className="pl-4 md:border-l-[3px] md:border-teal-600/25 md:dark:border-teal-500/30 md:pl-7 lg:pl-8 -ml-1 md:ml-0">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
             <span
-              className="font-mono text-[12px] sm:text-[13px] tabular-nums text-slate-400 dark:text-zinc-500"
+              className="font-mono text-[12px] sm:text-[13px] tabular-nums text-default-400"
               aria-hidden
             >
               {idx}
             </span>
-            <span className="h-px w-8 sm:w-10 bg-slate-300 dark:bg-zinc-700 shrink-0" />
-            <span className="text-[12px] text-slate-500 dark:text-zinc-500 font-medium">
+            <span className="h-px w-8 sm:w-10 bg-divider shrink-0" />
+            <span className="text-[12px] text-default-500 font-medium">
               {kind}
-              <span className="mx-2 text-slate-300 dark:text-zinc-600">·</span>
-              <span className="text-slate-400 dark:text-zinc-600">
+              <span className="mx-2 text-divider">·</span>
+              <span className="text-default-400">
                 {item.tools.length}{" "}
                 {item.tools.length === 1 ? "technology" : "technologies"}
               </span>
@@ -68,11 +68,11 @@ const ProjectRow = ({
            
           <h3
             id={titleId}
-            className="text-[1.65rem] sm:text-3xl md:text-[2rem] font-semibold tracking-tight text-slate-900 dark:text-zinc-50 mb-4 leading-snug transition-colors duration-300 group-hover/row:text-teal-800 dark:group-hover/row:text-teal-400/95"
+            className="text-[1.65rem] sm:text-3xl md:text-[2rem] font-semibold tracking-tight text-foreground mb-4 leading-snug transition-colors duration-300 group-hover/row:text-primary"
           >
             {item.name}
           </h3>
-          <p className="text-slate-600 dark:text-zinc-400 text-[15px] md:text-base leading-[1.78] mb-7">
+          <p className="text-foreground/70 text-[15px] md:text-base leading-[1.78] mb-7">
             {item.description}
           </p>
 
@@ -89,7 +89,7 @@ const ProjectRow = ({
                   delay: Math.min(ti * 0.045, 0.35),
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="inline-flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-md text-[13px] font-medium text-slate-700 dark:text-zinc-300 bg-white/95 dark:bg-zinc-900/95 border border-slate-200/95 dark:border-zinc-700/90 shadow-[0_1px_0_0_rgba(15,23,42,0.05)] dark:shadow-none"
+                className="inline-flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-md text-[13px] font-medium text-foreground bg-content1 border border-divider shadow-sm"
               >
                 <span className="w-4 h-4 flex items-center justify-center shrink-0 opacity-90 [&_img]:max-w-full [&_img]:max-h-full">
                   {tool.icon}
@@ -134,17 +134,17 @@ const ProjectRow = ({
           aria-label={previewLabel}
           className={cn(
             "relative w-full max-w-[min(100%,480px)] block rounded-xl overflow-hidden outline-none",
-            "ring-1 ring-slate-200/90 dark:ring-zinc-800",
-            "shadow-[0_12px_40px_-12px_rgba(15,23,42,0.14)] dark:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.5)]",
+            "ring-1 ring-divider",
+            "shadow-xl dark:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.5)]",
             "transition-[transform,box-shadow,ring-color] duration-500 ease-out",
-            "focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-zinc-950",
-            "group/image hover:shadow-[0_20px_48px_-16px_rgba(15,23,42,0.18)] dark:hover:shadow-[0_20px_48px_-16px_rgba(0,0,0,0.55)] hover:ring-slate-300/90 dark:hover:ring-zinc-600"
+            "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+            "group/image hover:shadow-2xl dark:hover:shadow-[0_20px_48px_-16px_rgba(0,0,0,0.55)] hover:ring-divider/80"
           )}
         >
           <div
             className={cn(
               "relative aspect-[4/3] md:aspect-square w-full",
-              "bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-zinc-900 dark:via-zinc-950 dark:to-black"
+              "bg-gradient-to-br from-content1 via-content2 to-background"
             )}
           >
             <NextImage
@@ -157,7 +157,7 @@ const ProjectRow = ({
               quality={88}
             />
           </div>
-          <span className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1.5 rounded-md bg-white/90 dark:bg-zinc-900/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-slate-600 dark:text-zinc-300 opacity-0 translate-y-1 transition-all duration-300 group-hover/image:opacity-100 group-hover/image:translate-y-0 shadow-sm ring-1 ring-slate-200/80 dark:ring-zinc-700">
+          <span className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1.5 rounded-md bg-background/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-foreground opacity-0 translate-y-1 transition-all duration-300 group-hover/image:opacity-100 group-hover/image:translate-y-0 shadow-sm ring-1 ring-divider">
             {item.demo !== "#" ? "Open" : "Repo"}
             <ArrowUpRight size={12} strokeWidth={2.5} className="opacity-80" />
           </span>
@@ -195,12 +195,12 @@ const Projects = () => {
   );
 
   return (
-    <div className="relative bg-slate-50 dark:bg-[#09090b] py-20 md:py-28 border-t border-slate-200/80 dark:border-zinc-800 overflow-hidden">
+    <div className="relative bg-background py-20 md:py-28 border-t border-divider overflow-hidden">
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.2]"
+        className="pointer-events-none absolute inset-0 opacity-[0.2]"
         aria-hidden
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(148 163 184 / 0.22) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
           backgroundSize: "28px 28px",
         }}
       />
@@ -212,7 +212,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: 0.05 }}
-            className="text-center text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto px-4 -mt-1 mb-14 md:mb-16 text-[15px] md:text-base leading-relaxed"
+            className="text-center text-foreground/60 max-w-2xl mx-auto px-4 -mt-1 mb-14 md:mb-16 text-[15px] md:text-base leading-relaxed"
           >
             Production-grade interfaces and client-facing products—ownership from
             architecture through delivery, with emphasis on performance,

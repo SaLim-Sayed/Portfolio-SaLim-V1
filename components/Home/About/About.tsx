@@ -26,7 +26,7 @@ const About = () => {
     </div>
   );
   return (
-    <div className="bg-slate-100 py-4">
+    <div className="bg-background py-16">
       <Center>
         <Title title={title} />
 
@@ -38,7 +38,7 @@ const About = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: reduce ? 0 : 0.5, ease: easeOutExpo }}
           >
-            <div className="p-2 bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden max-w-[350px] w-full">
+            <div className="p-2 bg-content1 rounded-3xl shadow-2xl border border-divider overflow-hidden max-w-[350px] w-full">
               <div
                 className="badge-base LI-profile-badge"
                 data-locale="ar_AE"
@@ -66,7 +66,7 @@ const About = () => {
               ease: easeOutExpo,
             }}
           >
-            <p className="leading-8 text-justify text-lg text-slate-700">
+            <p className="leading-8 text-justify text-lg text-foreground/80 font-medium">
               Senior Frontend & Mobile Engineer with 5+ years of experience designing and developing scalable web and cross-platform mobile applications using React.js, React Native, Next.js, TypeScript, and modern JavaScript frameworks. Proven experience delivering high-performance digital products across fintech, banking, e-commerce, and SaaS solutions. Strong expertise in state management (Redux, RTK Query), RESTful API integration, performance optimization, and building responsive, accessible user interfaces. Adept at collaborating with cross-functional teams in agile environments to deliver secure, reliable, and production-ready applications at scale.
             </p>
           </motion.div>

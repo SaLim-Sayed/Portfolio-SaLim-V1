@@ -17,7 +17,7 @@ const Hero = ({ }: IProps) => {
   const reduce = useReducedMotion();
 
   const renderContent = () => (
-    <div className="flex flex-col gap-6 items-center p-4 md:p-12 text-white text-center">
+    <div className="flex flex-col gap-6 items-center p-4 md:p-12 text-center">
       <motion.div
         initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Hero = ({ }: IProps) => {
         className="text-4xl"
       >
         <Title
-          exStTitle="text-white text-center items-center justify-center"
+          exStTitle="text-center items-center justify-center font-bold"
           title={"Hello 👋 I'm"}
           subTitle="Salim Sayed"
           desc="Senior Frontend / React Native Engineer"
@@ -59,7 +59,7 @@ const Hero = ({ }: IProps) => {
           color="primary"
           variant="flat"
           size="lg"
-          className="font-semibold px-8 backdrop-blur-md bg-blue-600/20 text-white border border-blue-500/30"
+          className="font-semibold px-8 backdrop-blur-md border border-primary/20"
         >
           <Link
             className="flex items-center gap-2"
@@ -76,10 +76,10 @@ const Hero = ({ }: IProps) => {
           size="lg"
           color="secondary"
           variant="flat"
-          className="font-semibold px-8 backdrop-blur-md bg-white/10"
+          className="font-semibold px-8 backdrop-blur-md border border-secondary/20"
         >
           <Link
-            className="flex items-center gap-2 text-white"
+            className="flex items-center gap-2"
             target="_blank"
             href="/CV.pdf"
             download="SalimSayed sr_frontend CV.pdf"
@@ -94,11 +94,11 @@ const Hero = ({ }: IProps) => {
   );
 
   return (
-    <div id="main" className="relative min-h-[50vh] flex items-center bg-[#0a0a0a] overflow-hidden">
+    <div id="main" className="relative min-h-[60vh] flex items-center bg-background overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[80%] bg-blue-900/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[80%] bg-orange-900/10 blur-[120px] rounded-full" />
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[80%] bg-primary/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[80%] bg-secondary/10 blur-[120px] rounded-full" />
       </div>
 
       <Center>

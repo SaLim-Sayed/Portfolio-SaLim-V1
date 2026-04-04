@@ -51,7 +51,7 @@ export default function Ads() {
           "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
       }}
     >
-      <ModalContent aria-labelledby="labeldiv" className="bg-[#11303d]">
+      <ModalContent aria-labelledby="labeldiv" className="bg-content1 border border-divider">
         <ModalHeader aria-labelledby="labeldiv" className="flex flex-col gap-1">
           <Button
             isIconOnly
@@ -68,7 +68,6 @@ export default function Ads() {
         <ModalBody aria-labelledby="labeldiv" className="pb-[20px]">
           <Title
             title={title}
-            exStTitle="text-white"
             desc="Senior Frontend / React Native Engineer"
           />
         </ModalBody>

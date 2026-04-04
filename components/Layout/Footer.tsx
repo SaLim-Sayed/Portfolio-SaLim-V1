@@ -13,19 +13,19 @@ const Footer = () => {
 
   return (
     <motion.div
-      className="bg-black"
+      className="bg-background border-t border-divider"
       initial={reduce ? { opacity: 1 } : { opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: reduce ? 0 : 0.45, ease: easeOutExpo }}
     >
       <Center>
-        <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-4 text-white">
-          <div className="flex font-bold">
-            Copy rights <Copyright className="mx-2" /> reserved to{" "}
-            <span className="font-bold text-teal-600 mx-2">
+        <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-8 text-foreground">
+          <div className="flex font-bold items-center">
+            Copy rights <Copyright size={18} className="mx-2" /> reserved to{" "}
+            <span className="font-bold text-primary mx-2">
               {" "}
-              Salim Sayed Salim Mohamed
+              Salim Sayed
             </span>
           </div>
           <div className=" flex gap-4">
