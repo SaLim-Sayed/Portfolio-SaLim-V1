@@ -38,7 +38,9 @@ export function AnimatedSection({
       variants={fadeUpVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-72px", amount: 0.12 }}
+      // Avoid a high `amount` (e.g. 0.12): on very tall sections that requires a huge
+      // strip in view before un-hiding; parent stayed opacity:0 so rows looked empty.
+      viewport={{ once: true, margin: "0px 0px -96px 0px", amount: "some" }}
       transition={{ duration: 0.55, delay, ease: easeOutExpo }}
     >
       {children}
