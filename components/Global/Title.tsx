@@ -43,7 +43,7 @@ export default function Title({
       </div>
       <div
         className={cn(
-          "text-default-500 font-[400] lg:text-[1.4rem] text-[1.1rem] max-w-md",
+          "text-default-500 font-[400] lg:text-[1.4rem] text-[1.1rem] ",
           exStSubTitle
         )}
       >

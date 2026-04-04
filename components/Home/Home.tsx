@@ -12,7 +12,11 @@ import Ads from "../Global/Ads";
 
 const Home = () => {
   return (
-    <div className="max-w-[100%] overflow-x-hidden relative">
+    <div className="max-w-[100%] overflow-x-hidden relative bg-background">
+         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[80%] bg-primary/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[80%] bg-secondary/10 blur-[120px] rounded-full" />
+      </div>
       <Ads />
       <Hero />
       <AnimatedSection id="about">

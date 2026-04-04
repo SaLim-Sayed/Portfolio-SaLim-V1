@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { BsWhatsapp } from "react-icons/bs";
+import { Phone } from "lucide-react";
 import { ThemeSwitcher } from "@/components/Global/ThemeSwitcher";
 import { links } from "./links";
 
@@ -80,17 +80,11 @@ export default function MainNavbar() {
           <ThemeSwitcher />
         </NavbarItem>
         <NavbarItem>
-          <Button variant="bordered" size="lg" color="primary">
-            <Link
-              className="flex items-center gap-2"
-              href="https://api.whatsapp.com/send?phone=201062913674"
-              rel="noreferrer"
-              target="_blank"
-            >
-              {" "}
+          <Button variant="bordered" size="lg" color="primary" as={Link} href="tel:+201062913674">
+            <span className="flex items-center gap-2">
               Call Me
-              <BsWhatsapp />
-            </Link>
+              <Phone size={20} strokeWidth={2} aria-hidden />
+            </span>
           </Button>
         </NavbarItem>
       </NavbarContent>

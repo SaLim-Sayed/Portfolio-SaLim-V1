@@ -68,7 +68,7 @@ export default function Ads() {
         <ModalBody aria-labelledby="labeldiv" className="pb-[20px]">
           <Title
             title={title}
-            desc="Senior Frontend / React Native Engineer"
+            desc="Senior Frontend / React Native Developer"
           />
         </ModalBody>
       </ModalContent>

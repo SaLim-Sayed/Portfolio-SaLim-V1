@@ -23,7 +23,7 @@ const Hero = ({}: IProps) => {
           exStTitle="text-center items-center justify-center font-bold"
           title={"Hello 👋 I'm"}
           subTitle="Salim Sayed"
-          desc="Senior Frontend / React Native Engineer"
+          desc="Senior Frontend / React Native Developer"
         />
       </div>
 
