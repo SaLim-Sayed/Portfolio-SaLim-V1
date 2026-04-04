@@ -1,5 +1,4 @@
 "use client";
-import { AnimatedSection } from "@/components/Global/AnimatedSection";
 import { ScrollToTopFab } from "@/components/Global/ScrollToTopFab";
 import About from "./About/About";
 import ContactUs from "./Contact/ContactUs";
@@ -15,24 +14,24 @@ const Home = () => {
     <div className="max-w-[100%] overflow-x-hidden relative">
       <Ads />
       <Hero />
-      <AnimatedSection id="about">
+      <div id="about">
         <About />
-      </AnimatedSection>
-      <AnimatedSection id="WorkExperince" delay={0.04}>
+      </div>
+      <div id="WorkExperince">
         <WorkExp />
-      </AnimatedSection>
-      <AnimatedSection id="Education" delay={0.06}>
+      </div>
+      <div id="Education">
         <Education />
-      </AnimatedSection>
-      <AnimatedSection id="techStack" delay={0.08}>
+      </div>
+      <div id="techStack">
         <TeckStack />
-      </AnimatedSection>
-      <AnimatedSection id="Projects" delay={0.1}>
+      </div>
+      <div id="Projects">
         <Projects />
-      </AnimatedSection>
-      <AnimatedSection id="contact" delay={0.12}>
+      </div>
+      <div id="contact">
         <ContactUs />
-      </AnimatedSection>
+      </div>
 
       <ScrollToTopFab />
     </div>

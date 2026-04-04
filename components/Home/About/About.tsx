@@ -5,13 +5,9 @@ import Center from "@/components/Global/Ui/Center";
 import { Button, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import Typewriter from "react-ts-typewriter";
-import { easeOutExpo } from "@/libs/motion";
 
 const About = () => {
-  const reduce = useReducedMotion();
-
   const title = (
     <div className="flex justify-center items-center">
       <Button
@@ -31,13 +27,7 @@ const About = () => {
         <Title title={title} />
 
         <div className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-8">
-          <motion.div
-            className="flex justify-center md:justify-end"
-            initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: reduce ? 0 : 0.5, ease: easeOutExpo }}
-          >
+          <div className="flex justify-center md:justify-end">
             <div className="p-2 bg-content1 rounded-3xl shadow-2xl border border-divider overflow-hidden max-w-[350px] w-full">
               <div
                 className="badge-base LI-profile-badge"
@@ -54,22 +44,12 @@ const About = () => {
                 ></Link>
               </div>
             </div>
-          </motion.div>
-          <motion.div
-            className="flex items-center p-6 sm:p-1"
-            initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{
-              duration: reduce ? 0 : 0.5,
-              delay: reduce ? 0 : 0.08,
-              ease: easeOutExpo,
-            }}
-          >
+          </div>
+          <div className="flex items-center p-6 sm:p-1">
             <p className="leading-8 text-justify text-lg text-foreground/80 font-medium">
               Senior Frontend & Mobile Engineer with 5+ years of experience designing and developing scalable web and cross-platform mobile applications using React.js, React Native, Next.js, TypeScript, and modern JavaScript frameworks. Proven experience delivering high-performance digital products across fintech, banking, e-commerce, and SaaS solutions. Strong expertise in state management (Redux, RTK Query), RESTful API integration, performance optimization, and building responsive, accessible user interfaces. Adept at collaborating with cross-functional teams in agile environments to deliver secure, reliable, and production-ready applications at scale.
             </p>
-          </motion.div>
+          </div>
         </div>
       </Center>
     </div>

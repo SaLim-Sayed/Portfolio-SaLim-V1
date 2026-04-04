@@ -5,20 +5,10 @@ import Center from "../Global/Ui/Center";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import { easeOutExpo } from "@/libs/motion";
 
 const Footer = () => {
-  const reduce = useReducedMotion();
-
   return (
-    <motion.div
-      className="bg-background border-t border-divider"
-      initial={reduce ? { opacity: 1 } : { opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-20px" }}
-      transition={{ duration: reduce ? 0 : 0.45, ease: easeOutExpo }}
-    >
+    <div className="bg-background border-t border-divider">
       <Center>
         <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-8 text-foreground">
           <div className="flex font-bold items-center">
@@ -74,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </Center>
-    </motion.div>
+    </div>
   );
 };
 

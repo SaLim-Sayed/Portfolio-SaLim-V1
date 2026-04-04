@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Native/instant anchor and programmatic scroll — no smooth CSS scrolling */
+html {
+  scroll-behavior: auto;
+}
+
 body {
   max-width: 100%;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
- 

@@ -6,7 +6,6 @@ import { Button, Image } from "@nextui-org/react";
 import { projectsList } from "./data";
 import Link from "next/link";
 import { ArrowUpRight, Github } from "lucide-react";
-import { motion } from "framer-motion";
 import NextImage from "next/image";
 import { cn } from "@/libs/cn";
 
@@ -34,16 +33,13 @@ const ProjectRow = ({
   const kind = projectKind(item);
 
   return (
-    <motion.article
+    <article
       aria-labelledby={titleId}
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-56px" }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "group/row relative flex flex-col md:flex-row md:items-center gap-10 md:gap-14 lg:gap-20 py-16 md:py-[5.25rem] border-b border-divider last:border-b-0",
         "rounded-2xl md:rounded-none md:mx-0 -mx-1 px-3 md:px-0",
-        "transition-colors duration-300 md:hover:bg-content2/50"
+        "transition-colors duration-300 md:hover:bg-content2/50",
+        reversed && "md:flex-row-reverse"
       )}
     >
       <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col justify-center text-left min-w-0 md:max-w-xl pl-1 md:pl-0 border-l-[3px] border-teal-600/25 dark:border-teal-500/30 md:border-l-0 md:border-none">
@@ -65,7 +61,7 @@ const ProjectRow = ({
               </span>
             </span>
           </div>
-           
+
           <h3
             id={titleId}
             className="text-[1.65rem] sm:text-3xl md:text-[2rem] font-semibold tracking-tight text-foreground mb-4 leading-snug transition-colors duration-300 group-hover/row:text-primary"
@@ -76,26 +72,22 @@ const ProjectRow = ({
             {item.description}
           </p>
 
-          <div className="flex flex-wrap gap-2 mb-9" role="list" aria-label="Technologies used">
-            {item.tools.map((tool, ti) => (
-              <motion.span
+          <div
+            className="flex flex-wrap gap-2 mb-9"
+            role="list"
+            aria-label="Technologies used"
+          >
+            {item.tools.map((tool) => (
+              <span
                 key={tool.id}
                 role="listitem"
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.35,
-                  delay: Math.min(ti * 0.045, 0.35),
-                  ease: [0.22, 1, 0.36, 1],
-                }}
                 className="inline-flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-md text-[13px] font-medium text-foreground bg-content1 border border-divider shadow-sm"
               >
                 <span className="w-4 h-4 flex items-center justify-center shrink-0 opacity-90 [&_img]:max-w-full [&_img]:max-h-full">
                   {tool.icon}
                 </span>
                 {tool.name}
-              </motion.span>
+              </span>
             ))}
           </div>
 
@@ -163,20 +155,14 @@ const ProjectRow = ({
           </span>
         </Link>
       </div>
-    </motion.article>
+    </article>
   );
 };
 
 const Projects = () => {
   const title = (
     <div className="flex justify-center items-center gap-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.35 }}
-        className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-700 shadow-sm bg-white dark:bg-zinc-900"
-      >
+      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-700 shadow-sm bg-white dark:bg-zinc-900">
         <Image
           src="S_logo.jpeg"
           alt="LOGO"
@@ -184,7 +170,7 @@ const Projects = () => {
           height={56}
           className="object-cover w-full h-full"
         />
-      </motion.div>
+      </div>
       <div className="flex flex-col items-start text-left">
         <span className="text-teal-700 dark:text-teal-500 text-[11px] font-semibold uppercase tracking-[0.28em] mb-1">
           Portfolio
@@ -207,17 +193,11 @@ const Projects = () => {
       <Center>
         <div className="relative z-[1] w-full">
           <Title title={title} />
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.05 }}
-            className="text-center text-foreground/60 max-w-2xl mx-auto px-4 -mt-1 mb-14 md:mb-16 text-[15px] md:text-base leading-relaxed"
-          >
+          <p className="text-center text-foreground/60 max-w-2xl mx-auto px-4 -mt-1 mb-14 md:mb-16 text-[15px] md:text-base leading-relaxed">
             Production-grade interfaces and client-facing products—ownership from
             architecture through delivery, with emphasis on performance,
             accessibility, and maintainable frontends.
-          </motion.p>
+          </p>
 
           <div className="w-full max-w-[1140px] mx-auto px-5 sm:px-8 lg:px-10">
             {projectsList.map((item, index) => (
