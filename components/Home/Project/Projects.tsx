@@ -3,11 +3,13 @@ import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
 import Typewriter from "react-ts-typewriter";
 import { Button, Image } from "@nextui-org/react";
+import { motion, useReducedMotion } from "framer-motion";
 import { projectsList } from "./data";
 import Link from "next/link";
 import { ArrowUpRight, Github } from "lucide-react";
 import NextImage from "next/image";
 import { cn } from "@/libs/cn";
+import { staggerDelay, transitionSnappy } from "@/libs/motion";
 
 function projectKind(item: (typeof projectsList)[number]): string {
   const blob = item.tools.map((t) => t.name).join(" ").toLowerCase();
@@ -22,6 +24,7 @@ const ProjectRow = ({
   item: (typeof projectsList)[number];
   index: number;
 }) => {
+  const reduce = useReducedMotion();
   const reversed = index % 2 === 1;
   const idx = String(index + 1).padStart(2, "0");
   const titleId = `project-heading-${item.id}`;
@@ -33,7 +36,7 @@ const ProjectRow = ({
   const kind = projectKind(item);
 
   return (
-    <article
+    <motion.article
       aria-labelledby={titleId}
       className={cn(
         "group/row relative flex flex-col md:flex-row md:items-center gap-10 md:gap-14 lg:gap-20 py-16 md:py-[5.25rem] border-b border-divider last:border-b-0",
@@ -41,6 +44,10 @@ const ProjectRow = ({
         "transition-colors duration-300 md:hover:bg-content2/50",
         reversed && "md:flex-row-reverse"
       )}
+      initial={reduce ? false : { opacity: 0, y: 18 }}
+      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-32px 0px -32px 0px" }}
+      transition={{ ...transitionSnappy, delay: staggerDelay(index, 0.04, 0.2) }}
     >
       <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col justify-center text-left min-w-0 md:max-w-xl pl-1 md:pl-0 border-l-[3px] border-teal-600/25 dark:border-teal-500/30 md:border-l-0 md:border-none">
         <div className="pl-4 md:border-l-[3px] md:border-teal-600/25 md:dark:border-teal-500/30 md:pl-7 lg:pl-8 -ml-1 md:ml-0">
@@ -155,7 +162,7 @@ const ProjectRow = ({
           </span>
         </Link>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

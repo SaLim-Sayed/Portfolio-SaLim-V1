@@ -3,9 +3,27 @@ import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
 import Typewriter from "react-ts-typewriter";
 import { Image } from "@nextui-org/react";
+import { motion, useReducedMotion } from "framer-motion";
 import { skillsAll } from "./data";
 import { TechIcon } from "./TechIcon";
 import { cn } from "@/libs/cn";
+import { transitionSnappy } from "@/libs/motion";
+
+const skillGridContainer = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.025, delayChildren: 0.05 },
+  },
+};
+
+const skillGridItem = {
+  hidden: { opacity: 0, y: 8 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: transitionSnappy,
+  },
+};
 
 function SkillTile({
   name,
@@ -40,11 +58,41 @@ function SkillTile({
   );
 }
 
+const skillGridClass =
+  "grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center gap-x-4 gap-y-9 sm:gap-x-10 sm:gap-y-11 md:gap-x-10";
+
 function SkillGrid() {
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return (
+      <div className={skillGridClass}>
+        {skillsAll.map((item) => (
+          <div key={item.id}>
+            <SkillTile name={item.name}>
+              <TechIcon
+                localSrc={item.localSrc}
+                cdnSlug={item.cdnSlug}
+                cdnSlugFallback={item.cdnSlugFallback}
+                alt={item.name}
+              />
+            </SkillTile>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center gap-x-4 gap-y-9 sm:gap-x-10 sm:gap-y-11 md:gap-x-10">
+    <motion.div
+      className={skillGridClass}
+      variants={skillGridContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-48px 0px -48px 0px" }}
+    >
       {skillsAll.map((item) => (
-        <div key={item.id}>
+        <motion.div key={item.id} variants={skillGridItem}>
           <SkillTile name={item.name}>
             <TechIcon
               localSrc={item.localSrc}
@@ -53,9 +101,9 @@ function SkillGrid() {
               alt={item.name}
             />
           </SkillTile>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

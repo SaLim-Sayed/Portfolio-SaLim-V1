@@ -2,16 +2,20 @@
 
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import Center from "../Global/Ui/Center";
 import Title from "../Global/Title";
 import { BsWhatsapp, BsLinkedin } from "react-icons/bs";
 import { File } from "lucide-react";
 import ClientHydration from "../Global/ClientHydration";
+import { transitionSnappy } from "@/libs/motion";
 
 /* eslint-disable react/no-unescaped-entities */
 interface IProps {}
 
 const Hero = ({}: IProps) => {
+  const reduce = useReducedMotion();
+
   const renderContent = () => (
     <div className="flex flex-col gap-6 items-center p-4 md:p-12 text-center">
       <div className="text-4xl">
@@ -63,16 +67,14 @@ const Hero = ({}: IProps) => {
           color="secondary"
           variant="flat"
           className="font-semibold px-8 backdrop-blur-md border border-secondary/20"
+          as="a"
+          href="/CV.pdf"
+          download="SalimSayed-CV.pdf"
         >
-          <Link
-            className="flex items-center gap-2"
-            target="_blank"
-            href="/CV.pdf"
-            download="SalimSayed sr_frontend CV.pdf"
-          >
+          <span className="flex items-center gap-2">
             My Resume
             <File size={20} />
-          </Link>
+          </span>
         </Button>
       </div>
     </div>
@@ -87,11 +89,16 @@ const Hero = ({}: IProps) => {
 
       <Center>
         <ClientHydration LoaderComponent={<div className="h-[400px]" />}>
-          <div className="relative z-10 w-full mx-auto flex flex-col items-center justify-center py-12">
+          <motion.div
+            className="relative z-10 w-full mx-auto flex flex-col items-center justify-center py-12"
+            initial={reduce ? false : { opacity: 0, y: 14 }}
+            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            transition={transitionSnappy}
+          >
             <div className="w-full flex flex-col items-center">
               {renderContent()}
             </div>
-          </div>
+          </motion.div>
         </ClientHydration>
       </Center>
     </div>

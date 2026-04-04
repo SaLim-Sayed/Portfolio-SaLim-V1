@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatedSection } from "@/components/Global/AnimatedSection";
 import { Copyright } from "lucide-react";
 import Center from "../Global/Ui/Center";
 import { Button } from "@nextui-org/react";
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <div className="bg-background border-t border-divider">
       <Center>
-        <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-8 text-foreground">
+        <AnimatedSection className="flex flex-col gap-4 md:flex-row justify-center md:justify-between items-center py-8 text-foreground">
           <div className="flex font-bold items-center">
             Copy rights <Copyright size={18} className="mx-2" /> reserved to{" "}
             <span className="font-bold text-primary mx-2">
@@ -62,7 +63,7 @@ const Footer = () => {
               </Button>
             </Link>
           </div>
-        </div>
+        </AnimatedSection>
       </Center>
     </div>
   );

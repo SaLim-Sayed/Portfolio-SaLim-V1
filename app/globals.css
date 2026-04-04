@@ -11,3 +11,29 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/*
+ * Print / “Save as PDF” from the browser:
+ * Framer Motion and other animated UIs often leave inline opacity:0 / transforms,
+ * which produces blank pages. Reset those for capture only.
+ */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [style*="opacity"] {
+    opacity: 1 !important;
+  }
+
+  [style*="transform"] {
+    transform: none !important;
+  }
+
+  [style*="filter"] {
+    filter: none !important;
+  }
+}
