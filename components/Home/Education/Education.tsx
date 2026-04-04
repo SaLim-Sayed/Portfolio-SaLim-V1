@@ -43,35 +43,35 @@ const Education = () => {
   ];
 
   return (
-    <div className="bg-slate-100 py-12">
+    <div className="bg-slate-100 dark:bg-zinc-950/90 py-12">
       <Center>
         <Title title={title} />
         <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {educationData.map((edu, index) => (
             <div key={index}>
-              <Card className="border-none bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
+              <Card className="border-none bg-content1 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
                 <CardBody className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-50 rounded-2xl">
+                    <div className="p-3 bg-content2 rounded-2xl">
                       {edu.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-800">
+                      <h3 className="text-xl font-bold text-foreground">
                         {edu.degree}
                       </h3>
-                      <p className="text-blue-600 font-semibold mt-1">
+                      <p className="text-primary font-semibold mt-1">
                         {edu.institution}
                       </p>
 
-                      <div className="flex items-center gap-2 mt-3 text-slate-500 text-sm">
+                      <div className="flex items-center gap-2 mt-3 text-default-500 text-sm">
                         <Calendar size={14} />
                         <span>{edu.period}</span>
                       </div>
 
-                      <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                      <p className="mt-4 text-default-600 text-sm leading-relaxed border-t border-divider pt-4">
                         {edu.details}
                       </p>
-                      <div className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                      <div className="mt-4 text-default-600 text-sm leading-relaxed border-t border-divider pt-4">
                         {edu.stack.map((stack, i) => (
                           <span
                             key={i}

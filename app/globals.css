@@ -5,11 +5,17 @@
 /* Native/instant anchor and programmatic scroll — no smooth CSS scrolling */
 html {
   scroll-behavior: auto;
+  color-scheme: light dark;
 }
 
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* react-vertical-timeline: date labels readable in dark mode */
+.dark .vertical-timeline-element-date {
+  color: rgba(250, 250, 250, 0.72) !important;
 }
 
 /*

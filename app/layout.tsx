@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           src="https://platform.linkedin.com/badges/js/profile.js"
@@ -32,7 +32,9 @@ export default function RootLayout({
           type="text/javascript"
         />
       </head>
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}
+      >
         <NextUi>
           <HydrationZustand LoaderComponent={<MainLoader />}>
             <MainNavbar />

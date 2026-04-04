@@ -1,16 +1,36 @@
 "use client";
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
-import { Button, Image, Listbox, ListboxItem } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { SiNextdotjs, SiReact } from "react-icons/si";
 import Typewriter from "react-ts-typewriter";
+import { useTheme } from "next-themes";
+import { useEffect, useMemo, useState } from "react";
+import type { CSSProperties } from "react";
 
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+
 const WorkExp = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const timelineStyles = useMemo(() => {
+    const isDark = mounted && resolvedTheme === "dark";
+    const bg = isDark ? "#18181b" : "#ffffff";
+    const fg = isDark ? "#fafafa" : "#1e1e2c";
+    const iconBg = isDark ? "#0f766e" : "#1e1e2c";
+    return {
+      contentStyle: { background: bg, color: fg } as CSSProperties,
+      contentArrowStyle: { borderRight: `7px solid ${bg}` } as CSSProperties,
+      iconStyle: { background: iconBg, color: "#fff" } as CSSProperties,
+    };
+  }, [mounted, resolvedTheme]);
+
   const title = (
     <div className="flex justify-center items-center">
       <Button
@@ -25,18 +45,22 @@ const WorkExp = () => {
     </div>
   );
   return (
-    <div className="bg-slate-200 py-6">
+    <div className="bg-slate-200 dark:bg-zinc-950 py-6">
       <Center>
         <Title title={title} />
-          <VerticalTimeline>
+          <VerticalTimeline
+            lineColor={
+              mounted && resolvedTheme === "dark" ? "#3f3f46" : "#d4d4d8"
+            }
+          >
             {/* Bank Albilad */}
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="Oct 2025 - Present"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Software Engineer</h3>
@@ -52,10 +76,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="Jan 2024 - Oct 2025"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Frontend Developer</h3>
@@ -71,10 +95,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="Aug 2023 - Mar 2024"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Senior Software Engineer</h3>
@@ -90,10 +114,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="Aug 2022 - Aug 2023"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiNextdotjs />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Engineer (React & React Native)</h3>
@@ -109,10 +133,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="Oct 2021 - Aug 2022"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Developer</h3>
@@ -128,10 +152,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="2020 - Sep 2021"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Frontend Developer (React & React Native)</h3>
@@ -146,10 +170,10 @@ const WorkExp = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               visible={true}
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid white" }}
+              contentStyle={timelineStyles.contentStyle}
+              contentArrowStyle={timelineStyles.contentArrowStyle}
               date="2019"
-              iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+              iconStyle={timelineStyles.iconStyle}
               icon={<SiReact />}
             >
               <h3 className="vertical-timeline-element-title text-lg font-bold">Freelance React Native Developer</h3>

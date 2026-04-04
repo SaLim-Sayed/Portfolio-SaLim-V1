@@ -15,6 +15,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
+import { ThemeSwitcher } from "@/components/Global/ThemeSwitcher";
 import { links } from "./links";
 
 export default function MainNavbar() {
@@ -74,7 +75,10 @@ export default function MainNavbar() {
         ))}
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="gap-1 sm:gap-2">
+        <NavbarItem className="hidden sm:flex">
+          <ThemeSwitcher />
+        </NavbarItem>
         <NavbarItem>
           <Button variant="bordered" size="lg" color="primary">
             <Link
@@ -92,6 +96,9 @@ export default function MainNavbar() {
       </NavbarContent>
 
       <NavbarMenu>
+        <NavbarMenuItem className="flex sm:hidden w-full justify-end mb-2">
+          <ThemeSwitcher />
+        </NavbarMenuItem>
         {links.map((item) => (
           <>
             <NavbarMenuItem key={item.id}>
