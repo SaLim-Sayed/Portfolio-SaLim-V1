@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "react-vertical-timeline-component/style.min.css";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,8 @@ export default function RootLayout({
           <HydrationZustand LoaderComponent={<MainLoader />}>
             <MainNavbar />
             {children}
+            <Analytics />
+
             <Footer />
           </HydrationZustand>
         </NextUi>
