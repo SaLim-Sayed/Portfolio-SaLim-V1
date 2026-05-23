@@ -1,22 +1,14 @@
 "use client";
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
-import { Button, Card, CardBody, Image } from "@nextui-org/react";
-import React from "react";
+import { Card, CardBody } from "@nextui-org/react";
+import { Award, Calendar, GraduationCap } from "lucide-react";
 import Typewriter from "react-ts-typewriter";
-import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const Education = () => {
   const title = (
     <div className="flex justify-center items-center">
-      <Button
-        isIconOnly
-        size="lg"
-        variant="light"
-        className="w-20 h-20 flex gap-2"
-      >
-        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-      </Button>
+      
       <Typewriter text="EDUCATION" delay={1000} cursor={false} />
     </div>
   );

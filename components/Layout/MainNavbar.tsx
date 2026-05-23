@@ -38,12 +38,11 @@ export default function MainNavbar() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
           <Button
-            isIconOnly
-            size="lg"
+             size="md"
             variant="light"
-            className="w-20 h-20 flex gap-2"
+            className="w-40 h-16  bg-transparent flex gap-2"
           >
-            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+            <Image src="salim-tech-logo.png" alt="LOGO" width={1000} height={50} />
           </Button>
         </NavbarBrand>
 

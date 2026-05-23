@@ -1,22 +1,15 @@
 "use client";
 
-import { Button, Card, Image } from "@nextui-org/react";
-import Center from "@/components/Global/Ui/Center";
 import Title from "@/components/Global/Title";
-import ContactForm from "./ContactForm";
+import Center from "@/components/Global/Ui/Center";
+import { Card } from "@nextui-org/react";
 import Typewriter from "react-ts-typewriter";
+import ContactForm from "./ContactForm";
 
 const ContactUs = () => {
   const title = (
     <div className="flex justify-center items-center">
-      <Button
-        isIconOnly
-        size="lg"
-        variant="light"
-        className="w-20 h-20 flex gap-2"
-      >
-        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-      </Button>
+     
       <Typewriter text="Contact Me" delay={1000} cursor={false} />
     </div>
   );

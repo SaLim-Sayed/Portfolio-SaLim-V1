@@ -1,12 +1,11 @@
 "use client";
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
-import { Button, Image } from "@nextui-org/react";
+import { useTheme } from "next-themes";
+import type { CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SiNextdotjs, SiReact } from "react-icons/si";
 import Typewriter from "react-ts-typewriter";
-import { useTheme } from "next-themes";
-import { useEffect, useMemo, useState } from "react";
-import type { CSSProperties } from "react";
 
 import {
   VerticalTimeline,
@@ -33,14 +32,7 @@ const WorkExp = () => {
 
   const title = (
     <div className="flex justify-center items-center">
-      <Button
-            isIconOnly
-            size="lg"
-            variant="light"
-            className="w-20 h-20 flex gap-2"
-          >
-            <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-          </Button>
+     
       <Typewriter text="PROFESSIONAL EXPERIENCE" delay={1000} cursor={false} />
     </div>
   );
