@@ -16,7 +16,7 @@ const MainLoader = ({}: IProps) => {
         variant="light"
         className="w-20 h-20 flex gap-2"
       >
-        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
+        <Image src="salim-tech-logo.png" alt="LOGO" width={50} height={50} />
       </Button>
       <Typewriter text="Top Recent Projects" loop delay={1000} cursor={false} />
     </div>

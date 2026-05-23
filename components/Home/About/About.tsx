@@ -2,13 +2,12 @@
 
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
-import { Button, Image } from "@nextui-org/react";
-import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import Typewriter from "react-ts-typewriter";
-import { useTheme } from "next-themes";
 import { cn } from "@/libs/cn";
 import { reloadLinkedInBadgeScript } from "@/libs/linkedinBadge";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import Typewriter from "react-ts-typewriter";
 
 const LOAD_CHECK_MS = 400;
 const FAIL_AFTER_MS = 9000;
@@ -111,14 +110,7 @@ const About = () => {
 
   const title = (
     <div className="flex justify-center items-center">
-      <Button
-        isIconOnly
-        size="lg"
-        variant="light"
-        className="w-20 h-20 flex gap-2"
-      >
-        <Image src="S_logo.jpeg" alt="LOGO" width={50} height={50} />
-      </Button>
+       
       <Typewriter text="About Me" delay={1000} cursor={false} />
     </div>
   );

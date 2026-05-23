@@ -1,15 +1,15 @@
 "use client";
 import Title from "@/components/Global/Title";
 import Center from "@/components/Global/Ui/Center";
-import Typewriter from "react-ts-typewriter";
-import { Button, Image } from "@nextui-org/react";
-import { motion, useReducedMotion } from "framer-motion";
-import { projectsList } from "./data";
-import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
-import NextImage from "next/image";
 import { cn } from "@/libs/cn";
 import { staggerDelay, transitionSnappy } from "@/libs/motion";
+import { Button } from "@nextui-org/react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowUpRight, Github } from "lucide-react";
+import NextImage from "next/image";
+import Link from "next/link";
+import Typewriter from "react-ts-typewriter";
+import { projectsList } from "./data";
 
 function projectKind(item: (typeof projectsList)[number]): string {
   const blob = item.tools.map((t) => t.name).join(" ").toLowerCase();
@@ -169,19 +169,9 @@ const ProjectRow = ({
 const Projects = () => {
   const title = (
     <div className="flex justify-center items-center gap-4">
-      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-700 shadow-sm bg-white dark:bg-zinc-900">
-        <Image
-          src="S_logo.jpeg"
-          alt="LOGO"
-          width={56}
-          height={56}
-          className="object-cover w-full h-full"
-        />
-      </div>
+       
       <div className="flex flex-col items-start text-left">
-        <span className="text-teal-700 dark:text-teal-500 text-[11px] font-semibold uppercase tracking-[0.28em] mb-1">
-          Portfolio
-        </span>
+         
         <Typewriter text="Selected Works" delay={1000} cursor={false} />
       </div>
     </div>
