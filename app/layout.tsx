@@ -3,6 +3,7 @@ import MainLoader from "@/components/Global/MainLoader";
 import NextUi from "@/components/Global/NextUi";
 import Footer from "@/components/Layout/Footer";
 import MainNavbar from "@/components/Layout/MainNavbar";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "react-vertical-timeline-component/style.min.css";
@@ -45,6 +46,7 @@ export default function RootLayout({
             <Footer />
           </HydrationZustand>
         </NextUi>
+        <Analytics />
       </body>
     </html>
   );
